@@ -92,6 +92,70 @@ main {
   padding: 0 1.5rem 4rem;
 }
 
+/* Hero / Intro */
+.post-hero {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.post-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* Table of Contents */
+.toc {
+  background: var(--color-bg-warm);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.toc-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.toc-list {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.toc-list li {
+  margin-bottom: 0.4rem;
+}
+
+.toc-list a {
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color 0.2s;
+}
+
+.toc-list a:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
 /* Island sections */
 .island-section {
   padding-top: 2rem;
