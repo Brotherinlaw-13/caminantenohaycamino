@@ -3,12 +3,11 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
-  type?: string;
 }
 
-const { title, description = "Crónica de un viaje de quince días por las islas Azores: São Miguel, Flores, Corvo y Terceira.", image, type = "website" } = Astro.props;
+const { title, description = "Crónica de un viaje de quince días por las islas Azores: São Miguel, Flores, Corvo y Terceira.", image } = Astro.props;
 const siteUrl = "https://caminantenohaycamino.pages.dev";
-const ogImage = image || "/images/azores-000-og.jpg";
+const ogImage = image || "/images/azores-004-4b6e2d49c1ec.jpg";
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -18,22 +17,18 @@ const ogImage = image || "/images/azores-000-og.jpg";
   <title>{title}</title>
   <meta name="description" content={description} />
   
-  <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:type" content={type} />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content={`${siteUrl}${ogImage}`} />
   <meta property="og:locale" content="es_ES" />
   
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
   
-  <link rel="canonical" href={`${siteUrl}${Astro.url.pathname}`} />
-  
-  <!-- Favicon -->
+  <link rel="canonical" href={siteUrl} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   
   <style is:global>
@@ -46,12 +41,11 @@ const ogImage = image || "/images/azores-000-og.jpg";
     <p class="subtitle">Crónica de un viaje de nueve amigos por cuatro islas del archipiélago</p>
   </header>
   
-  <nav class="post-nav">
-    <a href="/">Inicio</a>
-    <a href="/san-miguel">São Miguel</a>
-    <a href="/flores">Flores</a>
-    <a href="/corvo">Corvo</a>
-    <a href="/terceira">Terceira</a>
+  <nav class="island-nav">
+    <a href="#san-miguel">São Miguel</a>
+    <a href="#flores">Flores</a>
+    <a href="#corvo">Corvo</a>
+    <a href="#terceira">Terceira</a>
   </nav>
   
   <slot />
@@ -59,5 +53,23 @@ const ogImage = image || "/images/azores-000-og.jpg";
   <footer>
     <p>© 2025 · 5 días de otoño por las Azores · Un viaje de nueve amigos</p>
   </footer>
+  
+  <script>
+    // Sticky nav highlight on scroll
+    const sections = document.querySelectorAll('.island-section');
+    const navLinks = document.querySelectorAll('.island-nav a');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const active = document.querySelector(`.island-nav a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -75% 0px' });
+    
+    sections.forEach(s => observer.observe(s));
+  </script>
 </body>
 </html>

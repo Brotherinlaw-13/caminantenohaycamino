@@ -1,4 +1,3 @@
-/* Global styles for Azores travel blog */
 :root {
   --color-bg: #ffffff;
   --color-text: #2c2c2c;
@@ -11,19 +10,11 @@
   --font-body: 'Georgia', 'Times New Roman', serif;
   --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --max-width: 860px;
-  --max-width-wide: 1100px;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-  font-size: 18px;
-  scroll-behavior: smooth;
-}
+html { font-size: 18px; scroll-behavior: smooth; scroll-padding-top: 4rem; }
 
 body {
   font-family: var(--font-body);
@@ -37,56 +28,58 @@ body {
 .site-header {
   background: var(--color-bg-warm);
   border-bottom: 1px solid var(--color-border);
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 2rem 2rem;
   text-align: center;
 }
 
 .site-header h1 {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--color-text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
 }
 
-.site-header h1 a {
-  color: inherit;
-  text-decoration: none;
-}
+.site-header h1 a { color: inherit; text-decoration: none; }
 
 .site-header .subtitle {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  margin-top: 0.25rem;
+  margin-top: 0.4rem;
   font-style: italic;
 }
 
-/* Navigation */
-nav.post-nav {
-  max-width: var(--max-width-wide);
-  margin: 0 auto;
-  padding: 1rem 2rem;
+/* Sticky island nav */
+nav.island-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.75rem 2rem;
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
   justify-content: center;
-  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
 }
 
-nav.post-nav a {
+nav.island-nav a {
   font-family: var(--font-heading);
   font-size: 0.8rem;
   text-decoration: none;
   color: var(--color-text-light);
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 0.9rem;
   border-radius: 2rem;
   border: 1px solid var(--color-border);
   transition: all 0.2s ease;
   white-space: nowrap;
 }
 
-nav.post-nav a:hover,
-nav.post-nav a.active {
+nav.island-nav a:hover,
+nav.island-nav a.active {
   background: var(--color-accent);
   color: white;
   border-color: var(--color-accent);
@@ -96,94 +89,58 @@ nav.post-nav a.active {
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 0 1.5rem 4rem;
 }
 
-/* Post */
-article.post {
-  max-width: var(--max-width);
-  margin: 0 auto;
+/* Island sections */
+.island-section {
+  padding-top: 2rem;
+  margin-bottom: 3rem;
 }
 
-article.post h1.post-title {
+.island-section + .island-section {
+  border-top: 3px solid var(--color-border);
+  padding-top: 3rem;
+}
+
+.island-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.island-title {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
   color: var(--color-text);
   letter-spacing: -0.03em;
+  line-height: 1.2;
 }
 
-article.post .post-meta {
-  font-size: 0.8rem;
-  color: var(--color-text-light);
-  font-family: var(--font-heading);
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--color-border);
-}
-
-/* Sections */
+/* Text */
 h2 {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-accent);
-  margin: 3rem 0 1rem;
+  margin: 2.5rem 0 1rem;
   letter-spacing: -0.02em;
 }
 
-h3 {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 2rem 0 0.75rem;
-}
+p { margin-bottom: 1.25rem; }
 
-p {
-  margin-bottom: 1.25rem;
-}
-
-a {
-  color: var(--color-accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-a:hover {
-  color: var(--color-green);
-}
+a { color: var(--color-accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--color-green); }
 
 /* Images */
-figure {
-  margin: 2rem -1.5rem;
-  position: relative;
-}
-
-figure img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
-}
-
-figure figcaption {
-  font-size: 0.8rem;
-  color: var(--color-text-light);
-  font-style: italic;
-  text-align: center;
-  padding: 0.5rem 1.5rem 0;
-  line-height: 1.4;
-}
-
 .post-image {
-  margin: 2rem 0;
+  margin: 1.75rem 0;
 }
 
 .post-image img {
   width: 100%;
   height: auto;
+  display: block;
   border-radius: 4px;
 }
 
@@ -194,101 +151,6 @@ figure figcaption {
   text-align: center;
   margin-top: 0.5rem;
   line-height: 1.4;
-}
-
-/* Hero image */
-.hero-image {
-  margin: 0 -1.5rem 2rem;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* Home page */
-.home-hero {
-  text-align: center;
-  padding: 4rem 2rem 3rem;
-  background: var(--color-bg-warm);
-}
-
-.home-hero h1 {
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin-bottom: 1rem;
-}
-
-.home-hero p {
-  font-size: 1.1rem;
-  color: var(--color-text-light);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.post-cards {
-  max-width: var(--max-width-wide);
-  margin: 3rem auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.post-card {
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.post-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-}
-
-.post-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.post-card .card-body {
-  padding: 1.25rem;
-}
-
-.post-card h2 {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  margin: 0 0 0.5rem;
-  color: var(--color-text);
-  line-height: 1.3;
-}
-
-.post-card p {
-  font-size: 0.85rem;
-  color: var(--color-text-light);
-  margin: 0;
-  line-height: 1.5;
-}
-
-.post-card .island-tag {
-  display: inline-block;
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-green);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -302,52 +164,14 @@ footer {
   background: var(--color-bg-warm);
 }
 
-/* Post navigation (prev/next) */
-.post-pagination {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.post-pagination a {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  text-decoration: none;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  transition: all 0.2s;
-  max-width: 48%;
-}
-
-.post-pagination a:hover {
-  border-color: var(--color-accent);
-  background: var(--color-bg-warm);
-}
-
-.post-pagination .prev { text-align: left; }
-.post-pagination .next { text-align: right; margin-left: auto; }
-
 /* Responsive */
 @media (max-width: 768px) {
   html { font-size: 16px; }
-  
-  .home-hero h1 { font-size: 1.8rem; }
-  article.post h1.post-title { font-size: 1.7rem; }
-  h2 { font-size: 1.3rem; }
-  
-  figure { margin: 1.5rem -0.5rem; }
-  .hero-image { margin: 0 -0.5rem 1.5rem; }
-  
-  main { padding: 1.5rem 1rem 3rem; }
-  
-  .post-cards { grid-template-columns: 1fr; padding: 0 1rem; }
-  
-  .post-pagination { flex-direction: column; }
-  .post-pagination a { max-width: 100%; }
-  
-  nav.post-nav { padding: 0.75rem 1rem; }
+  .site-header { padding: 1.5rem 1rem; }
+  .site-header h1 { font-size: 1.5rem; }
+  .island-title { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  main { padding: 0 1rem 3rem; }
+  nav.island-nav { padding: 0.6rem 0.75rem; gap: 0.35rem; }
+  nav.island-nav a { font-size: 0.75rem; padding: 0.3rem 0.7rem; }
 }

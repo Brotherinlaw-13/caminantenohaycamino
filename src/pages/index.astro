@@ -1,75 +1,1452 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const posts = [
-  {
-    slug: '/san-miguel',
-    title: 'São Miguel: verdor, lagos e historia',
-    island: 'São Miguel',
-    description: 'Ponta Delgada, Ribeira Grande, Vila Franca do Campo, senderismo por Sete Cidades y As Furnas, restaurantes y alojamiento.',
-    image: '/images/azores-004-4b6e2d49c1ec.jpg'
-  },
-  {
-    slug: '/flores',
-    title: 'Flores: naturaleza para perder el sentido',
-    island: 'Flores',
-    description: 'Cascadas espectaculares en Fajazinha, el Museo de la Ballena, la ruta al Faro de Albarnaz y la Aldeia da Cuada.',
-    image: '/images/azores-160-11b87d9a1ea7.jpg'
-  },
-  {
-    slug: '/corvo',
-    title: 'Corvo: un volcán transformado en isla mini',
-    island: 'Corvo',
-    description: 'La isla más pequeña de las Azores, su gigantesca caldera volcánica, los acantilados de Flores desde el mar y Vila de Corvo.',
-    image: '/images/azores-302-7c8157bdc5fb.jpg'
-  },
-  {
-    slug: '/terceira',
-    title: 'Terceira: Patrimonio de la Humanidad y mucha belleza',
-    island: 'Terceira',
-    description: 'Angra do Heroísmo, Praia da Victoria, la caminata de Serreta, la Gruta do Natal y el mirador de Serra do Cume.',
-    image: '/images/azores-374-bdb8435b897d.jpg'
-  }
-];
 ---
-<BaseLayout title="5 días de otoño por las Azores — Crónica de viaje">
-  <div class="home-hero">
-    <h1>5 días de otoño<br/>por las Azores</h1>
-    <p>Nueve amigos, quince días, cuatro islas. Crónica de un viaje al comienzo del otoño por São Miguel, Flores, Corvo y Terceira.</p>
-  </div>
-  
-  <div class="home-intro">
-    <main>
-      <p>Nueve amigos elegimos las Azores para un viaje de quince días al comienzo del otoño. El plan preveía visitar cuatro de las nueve islas, las que consideramos más accesibles e interesantes. Llegada al aeropuerto de Ponta Delgada, la capital de la isla de São Miguel; vuelo posterior a Flores, con escapada marítima a la diminuta isla de Corvo y, finalmente, isla Terceira. En cada una de las tres, cinco días alojados en una casa amplia con capacidad para todos. Así se planeó y se ejecutó. Y todo salió sin problemas... de relevancia.</p>
-    </main>
-  </div>
-  
-  <div class="post-cards">
-    {posts.map(post => (
-      <a class="post-card" href={post.slug}>
-        <img src={post.image} alt={post.title} loading="lazy" />
-        <div class="card-body">
-          <span class="island-tag">{post.island}</span>
-          <h2>{post.title}</h2>
-          <p>{post.description}</p>
-        </div>
-      </a>
-    ))}
-  </div>
-</BaseLayout>
+<BaseLayout title="5 días de otoño por las Azores" description="Crónica de un viaje de quince días por las islas Azores: São Miguel, Flores, Corvo y Terceira.">
+  <main>
+    <article class="post">
 
-<style>
-  .home-intro {
-    background: var(--color-bg-warm);
-    padding: 0 0 1rem;
-  }
-  .home-intro main {
-    padding-top: 2rem;
-  }
-  .home-intro p {
-    font-size: 1.05rem;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-</style>
+      <!-- Hero / Intro -->
+      <header class="post-hero">
+        <h1 class="post-title">Quince días de otoño por las Azores</h1>
+        <p class="post-subtitle">Crónica de un viaje de nueve amigos por cuatro islas del archipiélago portugués</p>
+      </header>
+
+      <!-- Table of Contents -->
+      <nav class="toc" aria-label="Índice de islas">
+        <h2 class="toc-title">Índice</h2>
+        <ol class="toc-list">
+          <li><a href="#san-miguel">São Miguel: verdor, lagos e historia</a></li>
+          <li><a href="#flores">Flores: naturaleza para perder el sentido</a></li>
+          <li><a href="#corvo">Corvo: un volcán transformado en isla mini</a></li>
+          <li><a href="#terceira">Terceira: Patrimonio de la Humanidad y mucha belleza</a></li>
+        </ol>
+      </nav>
+
+      <section id="san-miguel" class="island-section">
+        <div class="island-header">
+          <h1 class="island-title">1) São Miguel: verdor, lagos e historia</h1>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-000-f2946665a9e3.jpg" alt="Nueve amigos elegimos las Azores para un viaje de quince días al comienzo del otoño. El plan preveía visitar cuatro de las nueve islas, las que consideramos más accesibles (" loading="lazy" />
+          <p class="caption">Nueve amigos elegimos las Azores para un viaje de quince días al comienzo del otoño. El plan preveía visitar cuatro de las nueve islas, las que consideramos más accesibles (</p>
+        </div>
+        <p>avión) e interesantes. Llegada al aeropuerto de Ponta Delgada, la capital de la isla de San Miguel; vuelo posterior a Flores, con escapada marítima a la diminuta isla de Corvo y, finalmente, isla Terceira, como se ve en el mapa de arriba. En cada una de las tres, cinco días alojados en una casa amplia con capacidad para todos. Así se planeó y se ejecutó. Y todo salió sin problemas... de relevancia.</p>
+        <p>En esta entrada hablaremos primero de las ciudades de la isla, después de las rutas de senderismo que acometimos, de los restaurantes que conocimos y, finalmente, de nuestra casa de alquiler.</p>
+        <div class="post-image">
+          <img src="/images/azores-003-9b45e3874041.jpg" alt="San Miguel desde el aire, con su decorativa cúpula de nubes" loading="lazy" />
+          <p class="caption">San Miguel desde el aire, con su decorativa cúpula de nubes</p>
+        </div>
+        <p>er" style="margin-left: auto; margin-right: auto; text-align: left;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-005-37df04ebf3e8.jpg" alt="Una bienvenida de nivel antes de aterrizar" loading="lazy" />
+          <p class="caption">Una bienvenida de nivel antes de aterrizar</p>
+        </div>
+        <p>e el principio. Especialmente, el tremendo verdor de la isla (y las demás también, un poco menos Terceira), la belleza de sus paisajes, la suavidad de las temperaturas, con escasa variación entre la noche y el día, y también encontrar ciudades tan interesantes. De todo ello iremos hablando.</p>
+        <h2>Ponta Delgada</h2>
+        <p>En los cinco días de San Miguel fuimos en varias ocasiones a Ponta Delgada, la ciudad principal, donde se concentran la mitad de los 140.000 habitantes de una isla grandecita, 746 kilómetros cuadrados de superficie, 65 kilómetros de este a oeste y entre 8 y 16 kilómetros de anchura. Ponta Delgada es también una de las tres capitales del archipiélago, sin duda la principal, y una ciudad importante, atractiva y con un pasado muy a la vista.</p>
+        <div class="post-image">
+          <img src="/images/azores-007-1256c459a663.jpg" alt="Víctor, el guía del free tour, sujetando un mapa muy familiar: el anticiclón de las Azores" loading="lazy" />
+          <p class="caption">Víctor, el guía del free tour, sujetando un mapa muy familiar: el anticiclón de las Azores</p>
+        </div>
+        <p>ramos la posibilidad de realizar un free tour a través de la plataforma <a href="https://www.guruwalk.com/es?ref=wsx1xymxspth05suq3y3&amp;ref_campaign=18251186620__brand__es_brand_144526347967_pf00&amp;ref=wsx1xymxspth05suq3y3&amp;pf=pf00&amp;cid=18251186620&amp;pid=&amp;stg=brand&amp;pl=&amp;lg=es&amp;ag=brand&amp;agid=144526347967&amp;loc=1006906&amp;gad_source=1&amp;gad_campaignid=18251186620&amp;gbraid=0AAAAADMAfcXSWkV6fQPAncbMCk_h4-E8d&amp;gclid=Cj0KCQjwvJHIBhCgARIsAEQnWlBhkJNoFifBh4JHQsF-D-REo-dVQ4rw4KJX_BseFewGBdKwf5_b2-AaAgCFEALw_wcB" target="_blank" rel="noopener">Guruwalk</a>, y lo hicimos. Y quedamos encantados. Estuvo a cargo de Víctor, un venezolano con orígenes lusos. La pena fue que lo decidimos tarde y se llevó a cabo el último día en la isla. Error de principiantes, pues un tour guiado siempre descubre cosas en las que profundizar después. Por ello nos comprometimos a hacerlo nada más llegar en las siguientes islas. Desgraciadamente, no hubo lugar, en ninguna de ellas se ofertaban free tours. Solo visitas organizadas por agencias a precios excesivos.</p>
+        <div class="post-image">
+          <img src="/images/azores-009-5aafea3f5058.jpg" alt="Puertas de la Ciudad (1783), tarjeta de visita de Ponta Delgada" loading="lazy" />
+          <p class="caption">Puertas de la Ciudad (1783), tarjeta de visita de Ponta Delgada</p>
+        </div>
+        <p>Portas da Cidade, sin duda el emblema de la urbe. Data de 1783 y viene a ser como la torre Eiffel en París, el símbolo que identifica la ciudad.</p>
+        <div class="post-image">
+          <img src="/images/azores-011-64defb8df61b.jpg" alt="En 1952 fueron trasladadas unos metros durante la reurbanización de la zona" loading="lazy" />
+          <p class="caption">En 1952 fueron trasladadas unos metros durante la reurbanización de la zona</p>
+        </div>
+        <p>r y se construyeron donde entonces estaba el muelle del puerto, pegaditas al agua, que hoy está bastante lejos. Los rellenos posteriores, como en la mayoría de ciudades portuarias, las han alejado el mar, y si se ve una imagen de época es difícil reconocerlas.</p>
+        <div class="post-image">
+          <img src="/images/azores-013-51996fb768e7.jpg" alt="Inicio del free tour en la plaza Velho Cabral con su decoración adoquinada" loading="lazy" />
+          <p class="caption">Inicio del free tour en la plaza Velho Cabral con su decoración adoquinada</p>
+        </div>
+        <p>text-align: left;">La plaza de Gonzalo Velho Cabral (uno de los primeros navegantes portugueses que descubrieron y exploraron las islas), donde están situadas las puertas. También está a unos pocos metros de la <a href="https://www.tripadvisor.es/Attraction_Review-g189135-d4105885-Reviews-Igreja_Matriz_de_Sao_Sebastiao-Ponta_Delgada_Sao_Miguel_Azores.html" target="_blank" rel="noopener">iglesia matriz de San Sebastián.</a></p>
+        <div class="post-image">
+          <img src="/images/azores-015-85ccb1ab0545.jpg" alt="Iglesia matriz de San Sebastián" loading="lazy" />
+          <p class="caption">Iglesia matriz de San Sebastián</p>
+        </div>
+        <p>7), dedicado al santo protector de los enfermos, no en vano la isla acababa de pasar una epidemia de cólera cuando se iniciaron las obras. Construida en estilo manuelino (finales del XV, reinado de Manuel I, y XVI, vendría a ser un gótico con influencias mudéjares y posteriormente del Renacimiento), sufrió alteraciones en el siglo XVIII con el añadido de elementos barrocos.</p>
+        <div class="post-image">
+          <img src="/images/azores-017-c9e4d20dfca5.jpg" alt="Gárgola del templo" loading="lazy" />
+          <p class="caption">Gárgola del templo</p>
+        </div>
+        <p>ama la atención el olor a humedad, que comprobaríamos es una característica general de las islas, incluso en viviendas. Es, simplemente, una consecuencia del clima de Azores. En el alojamiento de la isla de Flores, una antigua casa de aldea, al llegar había repartidos varios deshumidificadores encendidos, y así estuvieron esos días. Y había que vaciar el agua a menudo.</p>
+        <div class="post-image">
+          <img src="/images/azores-019-15c4d5171262.jpg" alt="Sede de la Cámara Municipal (ayuntamiento) y su torre sineira detrás" loading="lazy" />
+          <p class="caption">Sede de la Cámara Municipal (ayuntamiento) y su torre sineira detrás</p>
+        </div>
+        <p>"text-align: left;">El edificio municipal es un inmueble atractivo y de época, con escaleras exteriores que llevan a la primera planta, la principal. Este diseño lo veríamos en otros lugares.</p>
+        <div class="post-image">
+          <img src="/images/azores-021-2a9e3080f1da.jpg" alt="Fortaleza de San Bras (siglo XVI), construida junto al mar" loading="lazy" />
+          <p class="caption">Fortaleza de San Bras (siglo XVI), construida junto al mar</p>
+        </div>
+        <p>;">Era una de las fortalezas que se levantaron como defensa frente a piratas y corsarios. Había más, pero desaparecieron en sucesivas obras a lo largo de los siglos. Alberga un museo militar, que no visitamos. En estas dos semanas comprobamos que algunas obras históricas fueron construidas durante la etapa española (1583/1640), cuando las Azores y todo Portugal pertenecía a la corona española, algo que suele sorprender a los españoles. En el caso de este fuerte, fue iniciado por Portugal pero se inauguró durante la etapa española.</p>
+        <p>Las islas precisaban buenas defensas, pues eran punto obligado de escala para los barcos que venían con riquezas de América.</p>
+        <div class="post-image">
+          <img src="/images/azores-023-c80fabaf11ff.jpg" alt="Con nuestro guía recorrimos una gran parte del centro histórico de la ciudad, la principal de las Azores y una de" loading="lazy" />
+          <p class="caption">Con nuestro guía recorrimos una gran parte del centro histórico de la ciudad, la principal de las Azores y una de</p>
+        </div>
+        <p>sus tres capitales con Angra do Heroismo (Terceira) y Horta (Faial). También nos explicó el origen de los nombres de las islas: San Miguel, descubierta el día de dicho santo igual que la de San Jorge; Flores, por su abundancia de flores; Pico, por tener la montaña más alta de Portugal; Terceira, que fue la tercera en ser avistada; Corvo porque había muchos cuervos....en fin, todo muy obvio.</p>
+        <div class="post-image">
+          <img src="/images/azores-025-503e2427538e.jpg" alt="Fachada de la iglesia de Todos los Santos" loading="lazy" />
+          <p class="caption">Fachada de la iglesia de Todos los Santos</p>
+        </div>
+        <p>da finalizó junto a la iglesia de Todos los Santos, considerada la obra barroca más importante en las islas. Data del siglo XVI y dos siglos más tarde iba a formar parte del colegio de los Jesuitas. Sin embargo, la expulsión de la orden de Portugal en 1759 paralizó este proyecto.</p>
+        <div class="post-image">
+          <img src="/images/azores-027-90fe8863a047.jpg" alt="Monumento al emigrante" loading="lazy" />
+          <p class="caption">Monumento al emigrante</p>
+        </div>
+        <p>realidad histórica en las islas, cuyos destinos principales eran Estados Unidos, Brasil y Canadá. De hecho, nuestro guía descendía de emigrantes a Venezuela. El proceso se ha suavizado en los últimos tiempos debido al desarrollo del turismo, que ha creado puestos de trabajo y dado más opciones a la población.</p>
+        <div class="post-image">
+          <img src="/images/azores-029-c23e6531fae9.jpg" alt="Vista de Ponta Delgada desde lo alto de la torre sineira del Ayuntamiento" loading="lazy" />
+          <p class="caption">Vista de Ponta Delgada desde lo alto de la torre sineira del Ayuntamiento</p>
+        </div>
+        <p>ext-align: left;">Siguiendo la recomendación de Víctor, subimos a la torre sineira de la Cámara Municipal, superando 106 angostos escalones. El acceso es gratuito pero un empleado regula los flujos, pues no es posible subir y bajar a la vez dada su estrechez. Una vez arriba, una preciosa vista de la ciudad de 360 grados. La urbe no presenta muchas anomalías estéticas, excepción hecha de un hotel en la costa que a los de Vigo recordó nuestro pecaminoso hotel Bahía.</p>
+        <div class="post-image">
+          <img src="/images/azores-031-f9089c8d6110.jpg" alt="Interior del mercado de Ponta Delgada" loading="lazy" />
+          <p class="caption">Interior del mercado de Ponta Delgada</p>
+        </div>
+        <p>por la tarde y sin duda no era su mejor momento de actividad, pero tenía buena pinta. Uno de sus atractivos es el aparcamiento anexo, que nos vino de perlas pues nuestra van de nueve plazas no cabía en cualquier sitio. Pero si se va por la mañana, puede estar completo, como nos pasó uno de los días.</p>
+        <div class="post-image">
+          <img src="/images/azores-033-616ef9e5e970.jpg" alt="Zona de baño con servicios en la zona marítima central de Ponta Delgada" loading="lazy" />
+          <p class="caption">Zona de baño con servicios en la zona marítima central de Ponta Delgada</p>
+        </div>
+        <p>por la ciudad, parte del grupo se dio un chapuzón en esta zona acotada para facilitar el baño en agua de mar. Un sitio agradable y bien acondicionado, muy cerca un área comercial y de bares en pleno centro.</p>
+        <h2>Ribeira Grande y la Mediática Rabo de Peixe</h2>
+        <p>Ribeira Grande es la segunda población de la isla, con algo más de 30.000 habitantes en el conjunto del municipio (la tercera parte el pueblo en sí). Situada en la parte central de la costa norte, nuestra casa estaba por esta zona. Sin embargo, en los últimos años ha logrado mucho mayor renombre una de sus catorce freguesías (entidades menores o lo que serían parroquias en Galicia), <a href="https://es.wikipedia.org/wiki/Rabo_de_Peixe_(serie_de_TV" target="_blank" rel="noopener">Rabo de Peixe</a>), debido a una exitosa serie de Netflix. En ella se novela un hecho real, el naufragio de un barco con droga en 2001, que inundó sus playas con media tonelada de cocaína. Esto provocó una larga colección de desgracias en esta localidad pese a la idea inicial de que les había caído el maná, cuyas consecuencias son todavía visibles y que generó un estigma a sus vecinos aún pendiente de erradicar.</p>
+        <div class="post-image">
+          <img src="/images/azores-035-cfaa9324d946.jpg" alt="Rabo de Peixe es una localidad resultona que trata de mejorar su imagen" loading="lazy" />
+          <p class="caption">Rabo de Peixe es una localidad resultona que trata de mejorar su imagen</p>
+        </div>
+        <p>camino a Ribeira y sin estar previsto, pero paramos a dar una vuelta. Varios de los viajeros habían visto la serie y lo comentaron con el resto.</p>
+        <div class="post-image">
+          <img src="/images/azores-037-8a175b46c7de.jpg" alt="Situada sobre un acantilado, han blindado su base para frenar la erosión" loading="lazy" />
+          <p class="caption">Situada sobre un acantilado, han blindado su base para frenar la erosión</p>
+        </div>
+        <p>e vecinos con aspecto dudoso y que en apariencia habían sido consumidores de droga. Por internet, sobre la marcha, supimos que soporta la fama de ser un lugar conflictivo y con mayor índice de delincuencia que el resto de la isla.</p>
+        <div class="post-image">
+          <img src="/images/azores-039-f53b05e2b556.jpg" alt="Iglesia del Buen Jesús" loading="lazy" />
+          <p class="caption">Iglesia del Buen Jesús</p>
+        </div>
+        <p>elta por el pueblo disfrutando de sus bellezas turísticas, principalmente la iglesia del Buen Jesús (siglo XVIII).</p>
+        <div class="post-image">
+          <img src="/images/azores-041-f2e6c00f883d.jpg" alt="Docenas de ramos de flores decoraban el templo en el día de la Virgen del Rosario" loading="lazy" />
+          <p class="caption">Docenas de ramos de flores decoraban el templo en el día de la Virgen del Rosario</p>
+        </div>
+        <p>Se estima que las obras se iniciaron en 1690 y finalizaron 45 años después, con el resultado de una iglesia barroca chula y bien cuidada.</p>
+        <div class="post-image">
+          <img src="/images/azores-043-aa730dc33da4.jpg" alt="El nombre de la localidad permite a los artistas realizar murales alusivos." loading="lazy" />
+          <p class="caption">El nombre de la localidad permite a los artistas realizar murales alusivos.</p>
+        </div>
+        <p>er" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-045-5efd46895653.jpg" alt="Enorme playa de arena de Ribeira Grande, totalmente desierta el día de nuestra visita" loading="lazy" />
+          <p class="caption">Enorme playa de arena de Ribeira Grande, totalmente desierta el día de nuestra visita</p>
+        </div>
+        <p>la zona nos encaminamos a Ribeira Grande para completar la jornada. Dos días después volveríamos a recordar la visita, pues el guía del free tour en Ponta Delgada sacó a colación lo ocurrido en Rabo de Peixe. Víctor insistió en que los rabenses soportan mala fama por este ya lejano episodio, pero que la localidad ha cambiado mucho y es preciso acabar con una tan negativa reputación.</p>
+        <div class="post-image">
+          <img src="/images/azores-047-499dcb0b297f.jpg" alt="Puente sobre el barranco encauzado en Ribeira Grande" loading="lazy" />
+          <p class="caption">Puente sobre el barranco encauzado en Ribeira Grande</p>
+        </div>
+        <p>rcamos sin problema la furgoneta cerca del mar y por una serie de pequeñas callejas llegamos al puente de la imagen superior. Lo atravesamos hacia la izquierda y aparecimos en el centro de una localidad que tiene categoría de ciudad desde 1981.</p>
+        <div class="post-image">
+          <img src="/images/azores-049-6d8e4231e3fe.jpg" alt="Tras los gigantescos metrosideros, el Ayuntamiento, un palacio de los siglos XVI y XVII" loading="lazy" />
+          <p class="caption">Tras los gigantescos metrosideros, el Ayuntamiento, un palacio de los siglos XVI y XVII</p>
+        </div>
+        <p>>Su casco antiguo es interesante, desde la plaza del Ayuntamiento, donde descansamos un rato en una terraza, subimos unas calles en cuesta para conocerlo.</p>
+        <div class="post-image">
+          <img src="/images/azores-051-ab7c6a2fc527.jpg" alt="Vista de Ribeira Grande y la torre municipal desde la iglesia matriz de la ciudad" loading="lazy" />
+          <p class="caption">Vista de Ribeira Grande y la torre municipal desde la iglesia matriz de la ciudad</p>
+        </div>
+        <p>style="text-align: left;">Mientras ascendíamos una calle en pendiente sonaba potente música pegadiza. Llegados a la plazoleta bajo la iglesia matriz de Nuestra Señora de la Estrella, descubrimos que el palco de la música lucía propaganda electoral preparado para un inminente acto de campaña. Estábamos a miércoles y el domingo siguiente se celebrarían elecciones municipales, que a nosotros nos pillaron ya en la isla de Flores. Como curiosidad, los socialistas perdieron el ayuntamiento ante la derecha por menos de 400 votos.</p>
+        <div class="post-image">
+          <img src="/images/azores-053-6fd07c9049b9.jpg" alt="Kiosko de la música reconvertido en escenario de un acto electoral socialista" loading="lazy" />
+          <p class="caption">Kiosko de la música reconvertido en escenario de un acto electoral socialista</p>
+        </div>
+        <p>e="text-align: left;">Con esta compañía musical, paseamos por la zona poco antes de regresar al vehículo para buscar donde cenar.</p>
+        <div class="post-image">
+          <img src="/images/azores-055-3c5a4226705c.jpg" alt="Iglesia matriz con su imponente escalinata" loading="lazy" />
+          <p class="caption">Iglesia matriz con su imponente escalinata</p>
+        </div>
+        <p>señar escalinatas para el acceso. Construida en las dos primeras décadas del siglo XVI sobre los restos de una capilla anterior, exhibe valiosos retablos y ornamentos. Nuestra Señora de la Estrella sobrevivió a los terremotos de los siglos XVI y XVII.</p>
+        <div class="post-image">
+          <img src="/images/azores-057-5acbed2a6280.jpg" alt="Por nuestra parte, desandamos el camino que hicimos al llegar, esta vez por debajo del puente-viaducto, y abandonamos Ribeira Gra" loading="lazy" />
+          <p class="caption">Por nuestra parte, desandamos el camino que hicimos al llegar, esta vez por debajo del puente-viaducto, y abandonamos Ribeira Gra</p>
+        </div>
+        <p>nde, contentos de la visita a una localidad tranquila, agradable e histórica.</p>
+        <h2>Vila Franca do Campo</h2>
+        <p>De las principales localidades de la isla solo nos quedaba Vila Franca do Campo, la primera capital de la isla y originariamente sede del único municipio existente.</p>
+        <div class="post-image">
+          <img src="/images/azores-059-860a54ce471b.jpg" alt="Zona portuaria de Vila Franca do Campo" loading="lazy" />
+          <p class="caption">Zona portuaria de Vila Franca do Campo</p>
+        </div>
+        <p>pudimos estacionar la furgoneta cerca del mar, en este caso en la zona portuaria. Son localidades un tanto angostas, sin avenidas, y eso complica siempre el estacionamiento. Había muchos veleros en el puerto deportivo, como en otros lugares de la isla, y uno de los viajeros, conocedor del tema, está convencido de que han hecho el recorrido desde América y una vez en Azores han volado al continente a la espera del mejor momento para volver a recogerlo y terminar la travesía.</p>
+        <div class="post-image">
+          <img src="/images/azores-061-d17e5e1c705c.jpg" alt="Calle en pendiente de Vila Franca do Campo" loading="lazy" />
+          <p class="caption">Calle en pendiente de Vila Franca do Campo</p>
+        </div>
+        <p>a Delgada, lo que puede tener que ver con el terremoto que arrasó Vila Franca el 22 de octubre de 1522, 503 años casi día por día de nuestra visita. Provocó 5.000 muertos y el traslado de todos los servicios, capitalidad incluida, a Ponta Delgada.</p>
+        <div class="post-image">
+          <img src="/images/azores-063-135391438184.jpg" alt="Pese a ello encontramos edificios históricos en la plaza del Ayuntamiento." loading="lazy" />
+          <p class="caption">Pese a ello encontramos edificios históricos en la plaza del Ayuntamiento.</p>
+        </div>
+        <p>n-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-065-0b502bd3f6ba.jpg" alt="Sede municipal de Vila Franca do Campo" loading="lazy" />
+          <p class="caption">Sede municipal de Vila Franca do Campo</p>
+        </div>
+        <p>scaleras a la primera planta, como las de Ponta Delgada o Ribeira Grande.</p>
+        <div class="post-image">
+          <img src="/images/azores-067-eb6bb455c412.jpg" alt="Iglesia del Buen Jesús de la Piedra o iglesia de la Misericordia (siglo XV)" loading="lazy" />
+          <p class="caption">Iglesia del Buen Jesús de la Piedra o iglesia de la Misericordia (siglo XV)</p>
+        </div>
+        <p>también maciza y majestuoso, y fue uno de los principales hospitales del archipiélago.</p>
+        <div class="post-image">
+          <img src="/images/azores-069-fe051f572f84.jpg" alt="Regresamos al vehículo con la idea de subir a la capilla de Nuestra Señora de la Paz para disfrutar de las vistas y del islote situado frente a la localidad. Habíamos barajado ir en barco al i" loading="lazy" />
+          <p class="caption">Regresamos al vehículo con la idea de subir a la capilla de Nuestra Señora de la Paz para disfrutar de las vistas y del islote situado frente a la localidad. Habíamos barajado ir en barco al i</p>
+        </div>
+        <p>slote, pero lo desechamos ya que no había servicio disponible. Nos conformamos con verlo desde el mirador de Nuestra Señora de la Paz.</p>
+        <div class="post-image">
+          <img src="/images/azores-071-ee68c63207e8.jpg" alt="La vista desde el mirador es soberbia, sobre el pueblo y el mar, con el islote al fondo." loading="lazy" />
+          <p class="caption">La vista desde el mirador es soberbia, sobre el pueblo y el mar, con el islote al fondo.</p>
+        </div>
+        <p>ainer" style="margin-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-073-2aaacd7bb7d9.jpg" alt="O Ilheu, uno de los atractivos de Vila Franca" loading="lazy" />
+          <p class="caption">O Ilheu, uno de los atractivos de Vila Franca</p>
+        </div>
+        <p>na pequeña parte. Ligeramente abierto al mar, forma una piscina y uno de sus atractivos es el baño, pero recientemente se ha prohibido para proteger el ecosistema, y también limitado el número de embarcaciones que pueden visitarla.</p>
+        <div class="post-image">
+          <img src="/images/azores-075-6dfbd0e64732.jpg" alt="En una vista más de cerca se aprecia la apertura del cono al mar." loading="lazy" />
+          <p class="caption">En una vista más de cerca se aprecia la apertura del cono al mar.</p>
+        </div>
+        <p>eft;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-077-95c940acd148.jpg" alt="Capilla de Nuestra Señora de la Paz" loading="lazy" />
+          <p class="caption">Capilla de Nuestra Señora de la Paz</p>
+        </div>
+        <p>, en el lugar donde según la leyenda un pastor encontró una imagen de la virgen. Aparte de la discutible escalinata, desde allí se disfruta una bella vista y suele haber muchos visitantes en la zona.</p>
+        <h2>Caminata de Ribeira Grande al Salto del Cabrito</h2>
+        <p>Estuvimos cuatro días netos en San Miguel (descontando los de llegada y salida) y pudimos hacer tres rutas senderistas. De todas ellas nos quedó un muy buen recuerdo de los paisajes que recorrimos caminando, la forma más real y efectiva de conocer un territorio.</p>
+        <div class="post-image">
+          <img src="/images/azores-079-f2ac49687b10.jpg" alt="Área recreativa donde comenzó el paseo, con los nueve caminantes preparados" loading="lazy" />
+          <p class="caption">Área recreativa donde comenzó el paseo, con los nueve caminantes preparados</p>
+        </div>
+        <p>"text-align: left;">Hicimos ocho kilómetros y medio de recorrido en unas tres horas, a paso tranquilo, pero es cierto que hubo un imponderable. Estábamos avisados de que el camino estaba cortado en un punto, no sabíamos cual, pero teníamos nuestras dudas. Así que empezamos en la confianza de que no fuera así.... En fin, nada que afecte a un senderista en un lugar para nada problemático.</p>
+        <div class="post-image">
+          <img src="/images/azores-081-1ee99b208151.jpg" alt="La senda por la que iniciamos el paseo era cómoda, una autopista senderista, bajo árboles y rodeados de vegetación en un día soleado y tiemp" loading="lazy" />
+          <p class="caption">La senda por la que iniciamos el paseo era cómoda, una autopista senderista, bajo árboles y rodeados de vegetación en un día soleado y tiemp</p>
+        </div>
+        <p>o suave. Todo perfecto.</p>
+        <div class="post-image">
+          <img src="/images/azores-083-22a288a7888d.jpg" alt="Central hidroeléctrica en desuso" loading="lazy" />
+          <p class="caption">Central hidroeléctrica en desuso</p>
+        </div>
+        <p>un pequeño desvío para ver una antigua central hidroeléctrica desde hace años fuera de uso.</p>
+        <div class="post-image">
+          <img src="/images/azores-085-2a767036664f.jpg" alt="Enclavada en el fondo de un barranco, era una zona todavía más húmeda y la vegetación lo cubría todo. Los escalones había que baj" loading="lazy" />
+          <p class="caption">Enclavada en el fondo de un barranco, era una zona todavía más húmeda y la vegetación lo cubría todo. Los escalones había que baj</p>
+        </div>
+        <p>arlos con cuidado, con la humedad y el musgo estaban resbaladizos.</p>
+        <div class="post-image">
+          <img src="/images/azores-087-11241c6903bc.jpg" alt="Vegetación exuberante toda la ruta" loading="lazy" />
+          <p class="caption">Vegetación exuberante toda la ruta</p>
+        </div>
+        <p>amos que fuera cierto.</p>
+        <div class="post-image">
+          <img src="/images/azores-089-e0cc164bde73.jpg" alt="Pero la realidad se iba a imponer. Cuando estábamos cerca de otra instalación hidroeléctrica igualmente en desuso hubo señales que nos cerraban el paso. &lt;b" loading="lazy" />
+          <p class="caption">Pero la realidad se iba a imponer. Cuando estábamos cerca de otra instalación hidroeléctrica igualmente en desuso hubo señales que nos cerraban el paso. <b</p>
+        </div>
+        <p>r /><a</p>
+        <div class="post-image">
+          <img src="/images/azores-091-6e44af6105ea.jpg" alt="Terqueando, hubo quien bajo un desnivel para llegar al cauce, pequeño, y" loading="lazy" />
+          <p class="caption">Terqueando, hubo quien bajo un desnivel para llegar al cauce, pequeño, y</p>
+        </div>
+        <p>lo atravesó sobre unas piedras para buscar una salida por el bosque. En esas aparecieron un grupo de barranquistas con sus guías, y una de ellas nos confirmó que no había forma de seguir, que un árbol caído bloqueaba el paso. Así que dimos la vuelta para regresar al punto de partida de esta caminata circular por el sitio más adecuado.</p>
+        <div class="post-image">
+          <img src="/images/azores-093-c5b2ad25cc14.jpg" alt="Sin problema alguno llegamos al punto de salida y descansamos un ratito antes de marcharnos en el coche." loading="lazy" />
+          <p class="caption">Sin problema alguno llegamos al punto de salida y descansamos un ratito antes de marcharnos en el coche.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-095-d462bc76f1a1.jpg" alt="Nos llamaron la atención unas furnas con tapaderas, que hay también en otros sitio de esta isla volcánica, en el que vapores calientes salen a la superficie. Aquí los domingueros pueden venir a hacer un guiso" loading="lazy" />
+          <p class="caption">Nos llamaron la atención unas furnas con tapaderas, que hay también en otros sitio de esta isla volcánica, en el que vapores calientes salen a la superficie. Aquí los domingueros pueden venir a hacer un guiso</p>
+        </div>
+        <p>con el calor que sale de la tierra. Sorprendente. Localizamos otro día un restaurante que utiliza furnas de este tipo para hacer cocido, pero no lo probamos.</p>
+        <h2>Caminata Bordeando el Lago de Sete Cidades</h2>
+        <p>Otro de los días nos desplazamos al extremo oeste de la isla, al lugar conocido como <a href="https://es.wikipedia.org/wiki/Sete_Cidades" target="_blank" rel="noopener">Sete Cidades</a>, que es una gigantesca caldera en gran parte ocupada por dos lagos, Azul y Verde, llamados así por el color de sus aguas, un lugar de excepcional belleza. Junto a ellos existe una población llamada igualmente Sete Cidades.</p>
+        <div class="post-image">
+          <img src="/images/azores-097-e1f047e72ef8.jpg" alt="&lt;/td" loading="lazy" />
+          <p class="caption"></td</p>
+        </div>
+        <p>>Los viajeros caminantes sobre el lago Azul visto desde un mirador, un paisaje de cuento</p>
+        <div class="post-image">
+          <img src="/images/azores-099-1c622408727f.jpg" alt="Y los márgenes de la carretera, como en innumerables puntos de las Azores, bo" loading="lazy" />
+          <p class="caption">Y los márgenes de la carretera, como en innumerables puntos de las Azores, bo</p>
+        </div>
+        <p>rdeados por enormes y kilométricas matas de hortensias, al estilo de los agapantos en las de Madeira.</p>
+        <div class="post-image">
+          <img src="/images/azores-101-00212e6c2351.jpg" alt="Los dos lagos son en realidad uno solo, y en el punto de conexión existe una carretera sobre un puente que permite llegar a Sete Cidades pueblo." loading="lazy" />
+          <p class="caption">Los dos lagos son en realidad uno solo, y en el punto de conexión existe una carretera sobre un puente que permite llegar a Sete Cidades pueblo.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-103-19311a45a7cc.jpg" alt="Los arcos bajo este puente conectan las aguas de ambos lagos." loading="lazy" />
+          <p class="caption">Los arcos bajo este puente conectan las aguas de ambos lagos.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-105-b49bd5ba2559.jpg" alt="La primera parte del camino es extremadamente sencilla, paseando por una senda plana junto al lago, sin obstáculo alguno. Es el señuelo para" loading="lazy" />
+          <p class="caption">La primera parte del camino es extremadamente sencilla, paseando por una senda plana junto al lago, sin obstáculo alguno. Es el señuelo para</p>
+        </div>
+        <p>seguir adelante, donde las cosas fueron mucho más complicadas.</p>
+        <div class="post-image">
+          <img src="/images/azores-107-3636cbf32068.jpg" alt="Pronto empezaron las dificultades en la ruta" loading="lazy" />
+          <p class="caption">Pronto empezaron las dificultades en la ruta</p>
+        </div>
+        <p>o el camino penetra en la espesura, no hay planicie junto al lago y sí una senda irregular, con subidas y bajadas a veces pronunciadas, y abundantes dificultades. En varios lugares han colocado cuerdas al estilo de pasamanos para facilitar las cosas.</p>
+        <div class="post-image">
+          <img src="/images/azores-109-5ad5b6cd0e1a.jpg" alt="Árboles caídos, barro y pendientes en una senda casi inexistente" loading="lazy" />
+          <p class="caption">Árboles caídos, barro y pendientes en una senda casi inexistente</p>
+        </div>
+        <p>chamientos, y cosas por el estilo nos complicaron la marcha, y la ralentizaron. Íbamos muy despacio y nos cruzamos con mucha gente. A veces los dejábamos pasar para no hacerles caminar a nuestro paso. En algunos tramos hubo que saltar e incluso casi andar a gatas.</p>
+        <div class="post-image">
+          <img src="/images/azores-111-ce61312fd8ad.jpg" alt="El lago Azul en medio de la ruta semejaba un océano" loading="lazy" />
+          <p class="caption">El lago Azul en medio de la ruta semejaba un océano</p>
+        </div>
+        <p>eft;">En ocasiones divisábamos el lago y nos animábamos, pero la mayor parte íbamos bajo una cubierta vegetal impenetrable, como se intuye en estas imágenes.</p>
+        <div class="post-image">
+          <img src="/images/azores-113-bf2ec0c791b5.jpg" alt="Tuvimos una ayuda inesperada en forma de planta, el jengibre amarillo, una especie invasora que tiene colonizadas las islas, al menos las que visitamos, y del que hasta ese momento no conocíamos. Sus largos t" loading="lazy" />
+          <p class="caption">Tuvimos una ayuda inesperada en forma de planta, el jengibre amarillo, una especie invasora que tiene colonizadas las islas, al menos las que visitamos, y del que hasta ese momento no conocíamos. Sus largos t</p>
+        </div>
+        <p>allos nos servían para sujetarnos, evitar caídas e impulsarnos en las subidas. Aunque no nos gustaba, le cogimos cariño. Lo cierto es que tardamos tres horas en recorrer algo menos de cinco kilómetros, y que algunos puntos fueron difíciles, pero finalmente completamos la ruta.</p>
+        <h2>Caminata de As Furnas</h2>
+        <p>La tercera caminata fue en el otro extremo de la isla, en la parte este, también alrededor de un lago, en este caso llamado <a href="https://www.saomiguelguide.com/post/que-ver-furnas" target="_blank" rel="noopener">As Furnas</a>. No tuvo nada que ver con la anterior, plácida, tranquila, sobre un camino plano, totalmente relajada.</p>
+        <div class="post-image">
+          <img src="/images/azores-115-c9e273c59ec2.jpg" alt="Antes de iniciar el camino recorrimos la zona de As Furnas, junto al lago, donde existe una intensa actividad geotérmica volcánica. Tres eur" loading="lazy" />
+          <p class="caption">Antes de iniciar el camino recorrimos la zona de As Furnas, junto al lago, donde existe una intensa actividad geotérmica volcánica. Tres eur</p>
+        </div>
+        <p>os cuesta entrar.</p>
+        <div class="post-image">
+          <img src="/images/azores-117-2bd3df67115d.jpg" alt="Valladas para evitar incidentes, caminas junto a numerosas fumarolas, calderas humeantes, y en medio de un intenso olor a azufre, parecido a" loading="lazy" />
+          <p class="caption">Valladas para evitar incidentes, caminas junto a numerosas fumarolas, calderas humeantes, y en medio de un intenso olor a azufre, parecido a</p>
+        </div>
+        <p>l de la pólvora.</p>
+        <div class="post-image">
+          <img src="/images/azores-119-7c950f7961a9.jpg" alt="Aguas burbujeantes por el calor en As Furnas" loading="lazy" />
+          <p class="caption">Aguas burbujeantes por el calor en As Furnas</p>
+        </div>
+        <p>el grupo había estado ocho años antes en <a href="https://antipodas2017.blogspot.com/2017/11/kia-ora-en-busca-de-las-esencias.html" target="_blank" rel="noopener">Nueva Zelanda, y lo que aquí veíamos nos recordaba a Rotorúa</a>, un espacio similar aunque aquel mucho más grande y espectacular, sin restar méritos al de San Miguel.</p>
+        <div class="post-image">
+          <img src="/images/azores-121-6f8c57d67e40.jpg" alt="En el camino o cerca encontramos algunos árboles de tamaño espectacular. Especialmente la araucaria de la imagen, que un cartel identificaba" loading="lazy" />
+          <p class="caption">En el camino o cerca encontramos algunos árboles de tamaño espectacular. Especialmente la araucaria de la imagen, que un cartel identificaba</p>
+        </div>
+        <p>como una de las mayores del mundo tras una medición realizada en el año 2010. Entonces alcanzaba 51 metros de alto y 136 centímetros de diámetro, siendo en ese momento la segunda en todo el planeta, aunque admite que desde entonces la situación puede haber cambiado. El ejemplar, desde luego, impresionaba.</p>
+        <div class="post-image">
+          <img src="/images/azores-123-2794f4705193.jpg" alt="En los márgenes de la ruta resisten algunas destacadas construcciones que indudablemente tuvieron tiempos mejores.&lt;div style=&quot;text-ali" loading="lazy" />
+          <p class="caption">En los márgenes de la ruta resisten algunas destacadas construcciones que indudablemente tuvieron tiempos mejores.<div style="text-ali</p>
+        </div>
+        <p>gn: left;"></p>
+        <div class="post-image">
+          <img src="/images/azores-125-49103f91dc97.jpg" alt="Fue en todo momento un camino distendido, absolutamente sencillo, sin la menor complicación, quizás para compensar el de Sete Cidades." loading="lazy" />
+          <p class="caption">Fue en todo momento un camino distendido, absolutamente sencillo, sin la menor complicación, quizás para compensar el de Sete Cidades.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-127-9302290ca6d9.jpg" alt="En menos de dos horas a paso tranquilo cubrimos los seis kilómetros y medio del recorrido." loading="lazy" />
+          <p class="caption">En menos de dos horas a paso tranquilo cubrimos los seis kilómetros y medio del recorrido.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-129-fabb831504b4.jpg" alt="Acabado el paseo comimos en As Furnas, una pequeña población de unos 700 habitantes y en la que existen algunos canales que permiten el func" loading="lazy" />
+          <p class="caption">Acabado el paseo comimos en As Furnas, una pequeña población de unos 700 habitantes y en la que existen algunos canales que permiten el func</p>
+        </div>
+        <p>ionamiento de molinos</p>
+        <div class="post-image">
+          <img src="/images/azores-131-2671c06edc20.jpg" alt="Pese a una población tan exigua, la iglesia de esta freguesía del municipio de Povoaçao es enorme, aparentemente excesiva. Es relativamente reciente, iniciada en 1904, pe" loading="lazy" />
+          <p class="caption">Pese a una población tan exigua, la iglesia de esta freguesía del municipio de Povoaçao es enorme, aparentemente excesiva. Es relativamente reciente, iniciada en 1904, pe</p>
+        </div>
+        <p>ro las obras no terminaron hasta 1963. Por medio estuvo ocupada por el ejército ya que en 1913 había muerto su impulsor, el Marqués da Praia e Monforte, su impulsor. En 1946 La Condesa de Cuba dejó en su testamento dinero para continuar las obras, que así pudo concluirse.</p>
+        <h2>Lago de Fogo</h2>
+        <p>Hicimos el intento de ir a ver el lago de Fogo, pero en este caso las inclemencias meteorológicas boicotearon la excursión.</p>
+        <div class="post-image">
+          <img src="/images/azores-133-a07b60d0b496.jpg" alt="Llovía ligeramente y la niebla cerrada impedía disfrutar el paisaje." loading="lazy" />
+          <p class="caption">Llovía ligeramente y la niebla cerrada impedía disfrutar el paisaje.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-135-e65c4515b40e.jpg" alt="Pero nos empeñamos en ver algo y en el rato que estuvimos allí, no demasiado, algo aclaró." loading="lazy" />
+          <p class="caption">Pero nos empeñamos en ver algo y en el rato que estuvimos allí, no demasiado, algo aclaró.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-137-e7150f73069b.jpg" alt="Y al fondo de la hondonada de lo que en su momento fue un cráter volcánico empezó a dibujarse un lago, con lo que nos dimos por satisfechos." loading="lazy" />
+          <p class="caption">Y al fondo de la hondonada de lo que en su momento fue un cráter volcánico empezó a dibujarse un lago, con lo que nos dimos por satisfechos.</p>
+        </div>
+        <p>ign: left;"></p>
+        <h2>Restaurantes y Nuestra Casa</h2>
+        <div class="post-image">
+          <img src="/images/azores-139-b3ebdd562326.jpg" alt="La primera cena en Azores fue en el restaurante O Pescador, en Rabo de Peixe. Haciendo honor a su nombre, su carta estaba basada en los pescados. El pulpo ao Lagareiro" loading="lazy" />
+          <p class="caption">La primera cena en Azores fue en el restaurante O Pescador, en Rabo de Peixe. Haciendo honor a su nombre, su carta estaba basada en los pescados. El pulpo ao Lagareiro</p>
+        </div>
+        <p>que allí tomamos fue el mejor de todo el viaje y también excepcional el guiso de pescado en cataplana, Con postres para todos salimos a 23 euros persona, similar a otros en San Miguel y Terceira. En Flores los precios eran muy superiores y en general todo; como ejemplo la casa, que costó más que las otras dos juntas</p>
+        <div class="post-image">
+          <img src="/images/azores-141-73d672f89a05.jpg" alt="Restaurante Estradinho, en Ponta Delgada" loading="lazy" />
+          <p class="caption">Restaurante Estradinho, en Ponta Delgada</p>
+        </div>
+        <p>iguiente en Ponta Delgada comimos en Estradinho, también de pescado e igualmente bien puesto. Nos gustó algo menos. 26 euros persona.</p>
+        <p>Un día después, en Sete Cidades, fuimos a comer tarde tras la caminata y encontramos un bufé por 18 euros, bebida y café incluidos. Decente para salir del paso.</p>
+        <p>En Furnas comimos en el restaurante Ja&#180; se sabe, un sitio agradable. Carnes y pescados, bien y precio similar.</p>
+        <div class="post-image">
+          <img src="/images/azores-143-7afbf083527d.jpg" alt="Restaurante Associaçao Agrícola, afueras de Ribeira Grande, cerca de Rabo de Peixe &lt;br" loading="lazy" />
+          <p class="caption">Restaurante Associaçao Agrícola, afueras de Ribeira Grande, cerca de Rabo de Peixe <br</p>
+        </div>
+        <p>/>El viernes cerramos la estancia en San Miguel en el restaurante de la Associaçao Agrícola, especializado en carnes e instalado en una nave de exposiciones. Muy grande, bien montado y atendido, era ya de otro nivel. La mayoría optamos por la carne. 28 euros de media.</p>
+        <div class="post-image">
+          <img src="/images/azores-145-3ec1c49a46e2.jpg" alt="Respecto al alojamiento, &lt;a href=&quot;https://casa-dos-amigos.lovable.app/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;alquilamos una casa de dos plantas cerca de Ribeira Grande&lt;/a&gt;, con cinco dormitorios y tres baños. Estaba muy bie" loading="lazy" />
+          <p class="caption">Respecto al alojamiento, <a href="https://casa-dos-amigos.lovable.app/" target="_blank" rel="noopener">alquilamos una casa de dos plantas cerca de Ribeira Grande</a>, con cinco dormitorios y tres baños. Estaba muy bie</p>
+        </div>
+        <p>n, detalles al margen.</p>
+        <div class="post-image">
+          <img src="/images/azores-147-8d46fb840421.jpg" alt="Un gran salón donde estábamos cómodos, pero la estancia más agradable era la cocina." loading="lazy" />
+          <p class="caption">Un gran salón donde estábamos cómodos, pero la estancia más agradable era la cocina.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-149-03534bd7f6b7.jpg" alt="Bien surtida de menaje, con dos frigoríficos y una amplia mesa donde podíamos desayunar juntos y hacer una cena sencilla." loading="lazy" />
+          <p class="caption">Bien surtida de menaje, con dos frigoríficos y una amplia mesa donde podíamos desayunar juntos y hacer una cena sencilla.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-151-7349d5670917.jpg" alt="Había una terraza exterior que utilizamos poco, pero agradable, y contábamos con una lavadora y una secadora, ambas de gran capacidad." loading="lazy" />
+          <p class="caption">Había una terraza exterior que utilizamos poco, pero agradable, y contábamos con una lavadora y una secadora, ambas de gran capacidad.</p>
+        </div>
+        <p>tr-caption-container" style="float: right; text-align: justify;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-153-379b452c9003.jpg" alt="Y nos despedimos con la furgoneta que nos permitió recorrer la isla, do" loading="lazy" />
+          <p class="caption">Y nos despedimos con la furgoneta que nos permitió recorrer la isla, do</p>
+        </div>
+        <p>nde pasamos cinco agradables días.</p>
+      </section>
+
+      <section id="flores" class="island-section">
+        <div class="island-header">
+          <h1 class="island-title">2) Flores: naturaleza para perder el sentido</h1>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-158-bc78a08ff100.jpg" alt="Cascadas en los farallones de Fajazinha, un sitio muy especialLa isla de Flores es un aut" loading="lazy" />
+          <p class="caption">Cascadas en los farallones de Fajazinha, un sitio muy especialLa isla de Flores es un aut</p>
+        </div>
+        <p>éntico bombón para quien quiera disfrutar la naturaleza, convertida aquí en un espectáculo difícilmente relatable, un lugar de gran belleza. De manera especial su lado oeste, donde se encontraba nuestro alojamiento. Altos farallones cien por cien cubiertos de vegetación y surcados por innumerables cascadas. Impresiona, e inevitablemente pasa a formar parte de los paisajes inolvidables del mundo para quien tiene la suerte de contemplarlo. Sobre la marcha podría emparejarse, como valoración personal, con los lagos de Plivitce (Croacia), Yosemite (California), algunos valles de Suiza o Austria o el parque nacional Fiordland, en la isla sur de Nueva Zelanda.</p>
+        <div class="post-image">
+          <img src="/images/azores-159-19e632ce0269.jpg" alt="El grupo de viajeros emocionados con Flores había llegado desde San Miguel en un vuelo doméstico a bordo de un avión de hélice.&amp;n" loading="lazy" />
+          <p class="caption">El grupo de viajeros emocionados con Flores había llegado desde San Miguel en un vuelo doméstico a bordo de un avión de hélice.&n</p>
+        </div>
+        <p>bsp;</p>
+        <div class="post-image">
+          <img src="/images/azores-161-c15576f7b4ba.jpg" alt="El avión que nos llevó a Flores" loading="lazy" />
+          <p class="caption">El avión que nos llevó a Flores</p>
+        </div>
+        <p>d, el aeropuerto se encuentra en Santa Cruz das Flores, el punto más oriental de la isla, y la pista de aterrizaje aísla la capital del resto del territorio. Únicamente se puede entrar o salir de esta pequeña población por los extremos de dicha pista. En cualquier caso, estamos hablando de una isla poblada por unas 4.500 personas, de las que residen en Santa Cruz alrededor de la mitad.</p>
+        <div class="post-image">
+          <img src="/images/azores-163-8db23456bf43.jpg" alt="Aeropuerto de Flores" loading="lazy" />
+          <p class="caption">Aeropuerto de Flores</p>
+        </div>
+        <p>urismo ha sufrido un importante incremento en las Azores (no aparecen datos concretos de esta isla) y Flores es un lugar especial con perspectivas de crecimiento. Una prueba: los precios están disparados en las cuestiones que más afectan a los turistas: alojamiento y restauración. Como muestra, señalada ya en la entrada anterior, la casa nos costó 1980 &#8364; por cinco días, un poquito más que las de San Miguel y Terceira juntas. Y, por poner un ejemplo, si el polvo o Lagareiro (pulpo) costaba 18&#8364; en restaurantes de San Miguel, en Flores subía a 28&#8364;.</p>
+        <div class="post-image">
+          <img src="/images/azores-165-ead7b8eead0d.jpg" alt="La costa muestra el origen volcánico de la isla" loading="lazy" />
+          <p class="caption">La costa muestra el origen volcánico de la isla</p>
+        </div>
+        <p>;">Impresionados por el lugar y con un tiempo genial, nos dispusimos a recorrerlo. La costa, como se aprecia en esta imagen, exhibe a las claras sus orígenes volcánicos. Quizás por ello las playas son tan escasas.</p>
+        <div class="post-image">
+          <img src="/images/azores-167-b5b7aad85403.jpg" alt="Iglesia matriz de Nuestra Señora de la Concepción, en Santa Cruz" loading="lazy" />
+          <p class="caption">Iglesia matriz de Nuestra Señora de la Concepción, en Santa Cruz</p>
+        </div>
+        <p>: left;">La capital de la isla es un pueblo grande y un punto disperso, con limitado interés urbanístico. El edificio más notable que encontramos fue su iglesia principal.</p>
+        <div class="post-image">
+          <img src="/images/azores-169-c85a35ad01e5.jpg" alt="El templo tardó setenta años en construirse" loading="lazy" />
+          <p class="caption">El templo tardó setenta años en construirse</p>
+        </div>
+        <p>empezó a edificarse en 1781 sobre otro templo más modesto, pero no fue hasta 1859 que los trabajos terminaron. Esta lentitud y la abundancia de influencias se nota en su aspecto.</p>
+        <div class="post-image">
+          <img src="/images/azores-171-3e9df335237b.jpg" alt="Piscinas marinas aprovechando las rocas de lava" loading="lazy" />
+          <p class="caption">Piscinas marinas aprovechando las rocas de lava</p>
+        </div>
+        <p>la ciudad es prescindible, su borde litoral justo lo contrario, y lo comprobaríamos desde el mar el día de la excursión a la vecina isla de Corvo. Junto a su pequeño puerto, destinado más bien a las pequeñas embarcaciones que van a diario con turistas a Corvo, han construido unas piscinas marinas aprovechado los montículos de lava.</p>
+        <div class="post-image">
+          <img src="/images/azores-173-a48773a3df08.jpg" alt="Al sol en el faro del puerto de Santa Cruz das Flores" loading="lazy" />
+          <p class="caption">Al sol en el faro del puerto de Santa Cruz das Flores</p>
+        </div>
+        <p>día siguiente de llegar dedicamos la mañana a pasear Santa Cruz sin rumbo y con bastante tranquilidad.</p>
+        <div class="post-image">
+          <img src="/images/azores-175-c3f6319c68a2.jpg" alt="El agradable borde litoral de la capital estaba poco concurrido; al fondo se divisa la isla de Corvo&lt;div style=&quot;text-align: left;" loading="lazy" />
+          <p class="caption">El agradable borde litoral de la capital estaba poco concurrido; al fondo se divisa la isla de Corvo<div style="text-align: left;</p>
+        </div>
+        <p>Desde la zona más baja, donde está el puerto y otros servicios, ascendimos a la parte alta de la ciudad y nos encontramos con la sorpresa del <a href="https://es.vaiver.com/acores/fabrica-da-baleia-do-boqueirao/" target="_blank" rel="noopener">Museo de la Ballena de Boqueirao</a>. Ubicado en una antigua fábrica donde descuartizaban y aprovechaban el cuerpo de estos cetáceos, le dedicamos un buen rato y salimos encantados.</p>
+        <div class="post-image">
+          <img src="/images/azores-177-0c312e42647e.jpg" alt="&lt;/td" loading="lazy" />
+          <p class="caption"></td</p>
+        </div>
+        <p>>Museo del pasado ballenero de la isla</p>
+        <p>El recinto fue inaugurado en 2015, tres décadas después de la clausura de la fábrica. Por si fuera poco, era domingo y por esta razón no cobraban entrada</p>
+        <div class="post-image">
+          <img src="/images/azores-179-13905c3728e9.jpg" alt="Maqueta de barcos que muestra cómo se transportaban las ballenas una vez cazadas" loading="lazy" />
+          <p class="caption">Maqueta de barcos que muestra cómo se transportaban las ballenas una vez cazadas</p>
+        </div>
+        <p>tyle="text-align: left;">Disfrutamos con calma de la visita, que nos interesó sobremanera. Después, viendo las fotos, concluimos que no reflejan la excelente información que allí recibimos, entre la que destaca un vídeo ciertamente bien realizado.</p>
+        <div class="post-image">
+          <img src="/images/azores-181-132cf1f53d92.jpg" alt="Un cuidado vídeo nos sumergió en la vida de los balleneros a lo largo del siglo pasado" loading="lazy" />
+          <p class="caption">Un cuidado vídeo nos sumergió en la vida de los balleneros a lo largo del siglo pasado</p>
+        </div>
+        <p>En la película, con imágenes de mediados del siglo XX, se revive la caza de cachalotes en las aguas de Azores, pasando revista a todos los que intervenían. Desde los vigías que con prismáticos trataban de localizar los cetáceos desde puntos altos de la isla, hasta las tripulaciones y los barcos, a la espera del aviso para salir disparados a su caza.</p>
+        <div class="post-image">
+          <img src="/images/azores-183-068ead1d112a.jpg" alt="Embarcación dedicada a la caza de cetáceos" loading="lazy" />
+          <p class="caption">Embarcación dedicada a la caza de cetáceos</p>
+        </div>
+        <p>también analiza las embarcaciones utilizadas, los sistemas para dar caza a los animales, los materiales empleados, y todo lo que venía a continuación.</p>
+        <div class="post-image">
+          <img src="/images/azores-185-7e636b0e5151.jpg" alt="Maniquí en la zona de silos, donde se almacenaba el aceite obtenido de la ballena" loading="lazy" />
+          <p class="caption">Maniquí en la zona de silos, donde se almacenaba el aceite obtenido de la ballena</p>
+        </div>
+        <p>style="text-align: left;">Instalado en una vieja fábrica, construida entre 1941 y 1944, que estuvo en funcionamiento cuarenta años, allí se guarda la maquinaria utilizada y se explica su funcionamiento. Su cierre en 1984 no es casual, fue el momento en que se prohibió la caza de estos cetáceos.</p>
+        <div class="post-image">
+          <img src="/images/azores-187-b1acbad629be.jpg" alt="La caza de ballenas en Azores llegó de la mano de emigrantes azorianos en Estados Unidos enrolados en barcos balleneros. Volvieron a su tier" loading="lazy" />
+          <p class="caption">La caza de ballenas en Azores llegó de la mano de emigrantes azorianos en Estados Unidos enrolados en barcos balleneros. Volvieron a su tier</p>
+        </div>
+        <p>ra y en 1864 empezaron a dedicarse a la misma actividad en pequeñas empresas locales, que se mantuvo durante 120 años.</p>
+        <div class="post-image">
+          <img src="/images/azores-189-61507aaa2ce8.jpg" alt="Rampa de acceso a la fábrica, donde se descargaban las ballenas para trocearlas" loading="lazy" />
+          <p class="caption">Rampa de acceso a la fábrica, donde se descargaban las ballenas para trocearlas</p>
+        </div>
+        <p>los cachalotes aportaban riqueza a las islas. Como los cerdos, todo se aprovechaba: el aceite para la iluminación, dientes y huesos para hacer tallas, la carne para alimentar animales y el líquido del interior de su cabeza base de cosméticos y lubricantes.</p>
+        <div class="post-image">
+          <img src="/images/azores-191-d90569c3b0e9.jpg" alt="Exterior del museo de la ballena, con una reproducción a tamaño real" loading="lazy" />
+          <p class="caption">Exterior del museo de la ballena, con una reproducción a tamaño real</p>
+        </div>
+        <p>lign: left;">Llegado 1984 y el final de la caza de cachalotes, estos cetáceos siguen generando riqueza con las numerosas actividades de avistamiento para visitantes.</p>
+        <div class="post-image">
+          <img src="/images/azores-193-bf791955cc2a.jpg" alt="Centro de Interpretación del Geoparque" loading="lazy" />
+          <p class="caption">Centro de Interpretación del Geoparque</p>
+        </div>
+        <p>encuentra el Centro de Interpretación del Geoparque, dependiente del gobierno regional. Su finalidad es dar a conocer la riqueza ambiental, el patrimonio geológico, la fauna y flora y los ecosistemas marinos de la isla. También nos gustó, pero por el tipo de museo y su iluminación hicimos pocas fotos. No fue gratis, pero casi, ya que por mayores de 65 años pagamos solamente un euro por persona.</p>
+        <h2>Ruta al Pozo da Ribeira do Ferreiro (Fajazinha)</h2>
+        <p>En esta isla hicimos fundamentalmente una ruta larga, la de Ribeira do Ferreiro; otra más corta, al Faro de Albarnaz, y un paseo por la zona de las cascada de Ponta da Faja. En la primera de ellas, circular, salimos a pie desde la Aldeia da Cuada (nuestro alojamiento, una antigua aldea reconvertida), iniciando una caminata encantadora hasta el pozo de Ribeira do Ferreira, que viene a ser una poza muy grande donde acaban varias de las cascadas de los farallones de Fajazinha. Eso sí, el camino no fue sencillo, salvo el comienzo.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-195-8711453f5d7a.jpg" alt="Inicio de la ruta cerca del alojamiento, por un camino sombreado con piso de piedraLos muros en ocas" loading="lazy" />
+          <p class="caption">Inicio de la ruta cerca del alojamiento, por un camino sombreado con piso de piedraLos muros en ocas</p>
+        </div>
+        <p>iones eran más altos que nosotros, y nos sorprendía el trabajo que se habían tomado en su día. Leímos por algún sitio la explicación, que los terrenos de cultivo estaban llenos de piedras, que iban retirando y amontonando en los extremos de las fincas y luego servían para los muros. Y, obviamente, disponían de exceso de material.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-197-e999ec6b2d22.jpg" alt="El camino fue en su mayor parte a través de un denso bosque, a la sombra, que tampoco necesitábamos pues el día estaba cubierto y no tardando empezaría a llover. Y con intensidad.&lt;/di" loading="lazy" />
+          <p class="caption">El camino fue en su mayor parte a través de un denso bosque, a la sombra, que tampoco necesitábamos pues el día estaba cubierto y no tardando empezaría a llover. Y con intensidad.</di</p>
+        </div>
+        <p>v><a</p>
+        <div class="post-image">
+          <img src="/images/azores-199-6fb01d323708.jpg" alt="Tras cruzar la carretera de acceso a la Cuada el camino cambia: se empina, el bosque se hace más denso y el suelo mucho más firme.&lt;table align=&quot;ce" loading="lazy" />
+          <p class="caption">Tras cruzar la carretera de acceso a la Cuada el camino cambia: se empina, el bosque se hace más denso y el suelo mucho más firme.<table align="ce</p>
+        </div>
+        <p>nter" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-201-a6e40d4f33cc.jpg" alt="Durante un buen rato caminamos casi por una recia calzada romanaLa pendiente era fuerte y el suelo u" loading="lazy" />
+          <p class="caption">Durante un buen rato caminamos casi por una recia calzada romanaLa pendiente era fuerte y el suelo u</p>
+        </div>
+        <p>na alfombra de rocas de gran tamaño y nada planas, pero cumplían su función de alejar los pies del barro. Por los alrededores del camino bajaban regatos de agua con fuerza. Tanta agua tiene explicación: de las cascadas llegan a una poza y desde allí fluyen numerosos arroyuelos.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-203-932ac2f72e15.jpg" alt="Disfrutamos del camino y la tranquilidad, aunque no éramos los únicos caminantesSubimos relajados pe" loading="lazy" />
+          <p class="caption">Disfrutamos del camino y la tranquilidad, aunque no éramos los únicos caminantesSubimos relajados pe</p>
+        </div>
+        <p>ro sin pausa. Estábamos a gusto sin saber si podríamos llegar a la base de las cascadas. No imaginábamos como iba a ser, pero lo imaginábamos chulísimo.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-205-0bb1036fa128.jpg" alt="Con la boca abierta ante la belleza de las cascadas y el paisaje en generalPero nos equiv" loading="lazy" />
+          <p class="caption">Con la boca abierta ante la belleza de las cascadas y el paisaje en generalPero nos equiv</p>
+        </div>
+        <p>ocamos. No era un lugar bonito... sino un sitio excepcional como pocos. Ante la impresión, después de un guau general, dedicamos un buen rato a contemplar el espectáculo, sin movernos, dudando si sería real.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-207-4d1e178e0dea.jpg" alt="Se hacía difícil apartar la mirada de los saltos de agua Había más gente y todos mir" loading="lazy" />
+          <p class="caption">Se hacía difícil apartar la mirada de los saltos de agua Había más gente y todos mir</p>
+        </div>
+        <p>ábamos extasiados hacía los verdes farallones y unas cascadas que dejan caer el agua desde 180 metros de altura. Impresionante. Quizá un video sirva para hacer más justicia a un lugar que las fotos no acaban de reflejar.</p>
+        <div class="post-image">
+          <img src="/images/azores-209-85c164646632.jpg" alt="Foto oficial de los nueve viajeros en la Ribeira do FerreiroUna vez repuestos de este mal de Stendha" loading="lazy" />
+          <p class="caption">Foto oficial de los nueve viajeros en la Ribeira do FerreiroUna vez repuestos de este mal de Stendha</p>
+        </div>
+        <p>l en la naturaleza, reunimos fuerzas para una foto de grupo delante del lago y las cascadas. Allí terminaba el camino y decidimos regresar visiblemente satisfechos.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-211-8a18edc0bd77.jpg" alt="Las cascadas son innumerables y las lluvias de esa noche las habían reforzadoTras un último vistazo" loading="lazy" />
+          <p class="caption">Las cascadas son innumerables y las lluvias de esa noche las habían reforzadoTras un último vistazo</p>
+        </div>
+        <p>nos pusimos en marcha para desandar lo andado. Teníamos que ir con cierto cuidado, el camino estaba permanentemente a la sombra y había zonas resbaladizas, especialmente al descender. Pero sin incidencias llegamos a la carretera. Encontramos una especie de mesa con un techado y nos refugiamos de la lluvia, que comenzó a caer con ganas. Ante este inconveniente, el grupo se dividió: una parte volvió al alojamiento para ir hasta Faja Grande y el resto buscó la forma de proseguir la ruta por la zona.Estos últimos siguiendo la carretera llegaron a una entrada que previsiblemente llevaría a otras cascadas, pero no hubo forma. A unos cientos de metros una pareja de Granada nos explicó que un arroyo turbulento había roto el camino y era imposible pasar.Segundo intento por otro camino un poco más adelante, pero tampoco salió bien. Anduvimos un buen rato por un sitio bastante peligroso por los resbalones e igualmente con pendientes. Aproximadamente un kilómetro después llegamos a una zona abierta desde donde se veían las cascadas a lo lejos, y fue suficiente, decidimos dar la vuelta. Una vez en la carretera, buscamos una vía al otro lado de la carretera para dirigirnos al mar, hacia Fajazinha.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-213-b5d5be7b39b8.jpg" alt="El mar de Flores tras la excursión a las cascadasFue un camino bastante plano, sencillo, en ligero d" loading="lazy" />
+          <p class="caption">El mar de Flores tras la excursión a las cascadasFue un camino bastante plano, sencillo, en ligero d</p>
+        </div>
+        <p>escenso, entre fincas abandonadas con altos muros. Y cada rato tirando de chubasquero: llovía, paraba y se levantaba viento. Los paraguas tuvieron un día duro.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-215-13aa62d59b76.jpg" alt="Entre muros de fincas camino del marFue un tramo agradable, pero ya dentro de parámetros normales, n" loading="lazy" />
+          <p class="caption">Entre muros de fincas camino del marFue un tramo agradable, pero ya dentro de parámetros normales, n</p>
+        </div>
+        <p>ada que ver con la majestuosidad de las cascadas.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-217-a56d55eb013a.jpg" alt="Puente con barandilla únicaCerca de la costa atravesamos una aldea con algun" loading="lazy" />
+          <p class="caption">Puente con barandilla únicaCerca de la costa atravesamos una aldea con algun</p>
+        </div>
+        <p>as casas, seguimos la carretera y finalmente volvimos a una ruta de tierra. Antes tuvimos que sortear un arroyo por un estrecho puente, donde ahorraron presupuesto dejando una sola barandilla. <a</p>
+        <div class="post-image">
+          <img src="/images/azores-219-e54b0e046d5f.jpg" alt="El mar picado y el arroyo del puente con una sola barandillaLlovía con intensidad, algunos se refugi" loading="lazy" />
+          <p class="caption">El mar picado y el arroyo del puente con una sola barandillaLlovía con intensidad, algunos se refugi</p>
+        </div>
+        <p>aron debajo de ese puente y otros un poco más allá bajo la espesura. A esas horas estábamos literalmente empapados... pero contentos. Tuvimos que subir la fuerte pendiente de una montaña que acaba en el mar, y arriba, tras unos cientos de metros, llegamos a la Aldeia da Cuada. Estábamos en casa, habíamos completado una peculiar ruta circular. Cogimos nuestro vehículo y fuimos hasta Faja Grande donde nos aguardaba el resto del grupo. Ni siquiera nos cambiamos de ropa, sabíamos que pronto estaríamos secos.</p>
+        <h2>Paseo por la Estrada del Farol</h2>
+        <p>El extremo norte de la isla fue objeto de una pequeña excursión previo rodeo en coche. Dada la escasa red viaria tuvimos que ir hasta Santa Cruz, en el este, desde nuestro alojamiento, al oeste. Imposible subir directamente desde la Aldeia de Cuada por falta de carretera, solo un camino a partir de Ponta da Faja, y por supuesto ninguna población. Por ello, al alquilar la furgoneta, (otra van de nueve plazas), nos señalaron expresamente una serie de rutas por las que no podíamos circular, esta entre ellas. La amenaza era obvia: si ocurría algo, el seguro no nos ampararía.Lo dicho, fuimos hasta Santa Cruz y allí pusimos rumbo norte hacia Ponta Delgada, nombre idéntico a la capital de San Miguel. No fue empresa sencilla: diluviaba y el viento era intenso, todo ello en una carretera más bien estrecha y llena de curvas, donde circular precisaba esmero. Fuimos despacito, en manos de una conductora muy experimentada y, con calma, logramos llegar indemnes. Esta carretera es relativamente reciente, de los años 60, por lo que antes el norte estaba incomunicado.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-221-5fdbf150ac69.jpg" alt="La abrupta costa en el norte de la isla de FloresPonta Delgada es una pequeñísima población al nivel" loading="lazy" />
+          <p class="caption">La abrupta costa en el norte de la isla de FloresPonta Delgada es una pequeñísima población al nivel</p>
+        </div>
+        <p>del mar, a donde no llegamos a bajar, la carretera venía a un nivel más alto. Tiene aire de aldea, con las casas diseminadas, casi sin estructura urbana, y no alcanza el centenar de vecinos. La vimos desde lo alto y de seguido emprendimos el camino a pie en dirección al faro. La carretera era aún más estrecha, pero no pasaban coches.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-223-8c547ad50071.jpg" alt="Naturaleza, mar y rocas, sin rastros humanosAntes nos empapamos de la visión del Atlántico rompiendo" loading="lazy" />
+          <p class="caption">Naturaleza, mar y rocas, sin rastros humanosAntes nos empapamos de la visión del Atlántico rompiendo</p>
+        </div>
+        <p>contra esta pequeña isla, la más occidental de Europa, situada más cerca de América que del país del que forma parte, Portugal.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-225-23bd43d17e87.jpg" alt="El paisaje parece sacado de algunas zonas de IrlandaEstábamos casi en soledad, ni barcos" loading="lazy" />
+          <p class="caption">El paisaje parece sacado de algunas zonas de IrlandaEstábamos casi en soledad, ni barcos</p>
+        </div>
+        <p>en el mar, ni casas, ni personas en tierra. Y había dejado de llover, e incluso a ratos salía el sol, una suerte.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-227-fd7f5b2c6c68.jpg" alt="Así que nos pusimos en marcha para llegar al Faro de Albarnaz, el más occidental de Europa, a unos tres kilómetros." loading="lazy" />
+          <p class="caption">Así que nos pusimos en marcha para llegar al Faro de Albarnaz, el más occidental de Europa, a unos tres kilómetros.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-229-76baa90fac6c.jpg" alt="Marchábamos entre fincas, sin presencia humana, por un área carente de vegetación pero agradable y con abundancia de agua." loading="lazy" />
+          <p class="caption">Marchábamos entre fincas, sin presencia humana, por un área carente de vegetación pero agradable y con abundancia de agua.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-231-26fcaf8e2196.jpg" alt="Rebaños de ganado vacuno en fincas enormes eran nuestra única compañía." loading="lazy" />
+          <p class="caption">Rebaños de ganado vacuno en fincas enormes eran nuestra única compañía.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-233-2adccd37ab14.jpg" alt="Estas vacas no podían quejarse, con vistas al mar y abundancia de hierba y agua." loading="lazy" />
+          <p class="caption">Estas vacas no podían quejarse, con vistas al mar y abundancia de hierba y agua.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-235-cbe4c63145dc.jpg" alt="Al cabo de un rato llegamos al faro, un lugar tranquilo, y sin duda sometido a fuertes vientos. Después apareció una pareja de viajeros procedentes de la isla de San Miguel. Resultaba cur" loading="lazy" />
+          <p class="caption">Al cabo de un rato llegamos al faro, un lugar tranquilo, y sin duda sometido a fuertes vientos. Después apareció una pareja de viajeros procedentes de la isla de San Miguel. Resultaba cur</p>
+        </div>
+        <p>ioso, algunos veníamos de lejos a ver las islas, pero nuestro casero de San Miguel, por ejemplo, nos dijo que nunca había estado en Flores.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-237-9252d1dfb98e.jpg" alt="Ponta de Albarnaz nos pareció un lugar con cierta magia, y paseamos un rato por las inmediaciones. Allí terminaba la carretera, evidentemente creada para dar servicio al faro.&lt;" loading="lazy" />
+          <p class="caption">Ponta de Albarnaz nos pareció un lugar con cierta magia, y paseamos un rato por las inmediaciones. Allí terminaba la carretera, evidentemente creada para dar servicio al faro.<</p>
+        </div>
+        <p>/p><a</p>
+        <div class="post-image">
+          <img src="/images/azores-239-c93961f4d1b5.jpg" alt="Tras ello iniciamos el regreso culebreando entre pequeñas montañas. Nada turbaba nuestra placidez, hasta que una pareja de vaqueros apareció pastoreando un numerosos grupo de v" loading="lazy" />
+          <p class="caption">Tras ello iniciamos el regreso culebreando entre pequeñas montañas. Nada turbaba nuestra placidez, hasta que una pareja de vaqueros apareció pastoreando un numerosos grupo de v</p>
+        </div>
+        <p>acas, a las que cedimos gustosos la carretera. Minutos después las encerraban en una finca. Al rato llegamos a nuestro vehículo, regresamos a Santa Cruz para buscar donde comer y terminamos en un restaurante de pescado.</p>
+        <h2>Paseo a la Poza do Bacalhau (Faja Grande)</h2>
+        <p>Las cascadas de Faja Grande son visibles desde la zona costera, pero decidimos intentar acercarnos a su base sin saber si era posible. Aprovechamos una comida en el restaurante A Esplanada, también en Faja Grande, que nos pareció una localidad de unos cientos de habitantes (no hemos encontrado el dato) y agradable, sin más.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-241-882790720f66.jpg" alt="Cascadas de Faja GrandeRealmente, la excursión a la base de estas cascadas la intentamos d" loading="lazy" />
+          <p class="caption">Cascadas de Faja GrandeRealmente, la excursión a la base de estas cascadas la intentamos d</p>
+        </div>
+        <p>os veces. La primera abortamos al rato porque empezó a diluviar. La segunda fue un poco mejor, pero solo un poco.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-243-71fdb8e184d3.jpg" alt="A la búsqueda de la base de las cascadasEn este segundo intento llegamos a la base de una" loading="lazy" />
+          <p class="caption">A la búsqueda de la base de las cascadasEn este segundo intento llegamos a la base de una</p>
+        </div>
+        <p>de ellas, Poço do Bacalhau, y luego volvimos al camino para seguir investigando por la costa, pero de nuevo el tiempo se puso en nuestra contra. Otro diluvio cuasitropical y el consiguiente regreso acelerado, mojadura incluida. <a</p>
+        <div class="post-image">
+          <img src="/images/azores-245-dc0af0f721a0.jpg" alt="Antes del chubasco habíamos seguido el camino por la costa, y más adelante una senda perpendicular que lleva a la base de la cascada." loading="lazy" />
+          <p class="caption">Antes del chubasco habíamos seguido el camino por la costa, y más adelante una senda perpendicular que lleva a la base de la cascada.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-247-9bfdec0d21e0.jpg" alt="Según nos acercábamos la cascada iba engordando. De lejos parecía un hilillo de agua, pero en las proximidades tomaba cuerpo.&lt;di" loading="lazy" />
+          <p class="caption">Según nos acercábamos la cascada iba engordando. De lejos parecía un hilillo de agua, pero en las proximidades tomaba cuerpo.<di</p>
+        </div>
+        <p>v><a</p>
+        <div class="post-image">
+          <img src="/images/azores-249-7f5f39ca2742.jpg" alt="Es un sitio precioso, una de las atracciones emblemáticas de la isla. Influye sin duda la facilidad para disfrutar desde cerca de una caída de agua desd" loading="lazy" />
+          <p class="caption">Es un sitio precioso, una de las atracciones emblemáticas de la isla. Influye sin duda la facilidad para disfrutar desde cerca de una caída de agua desd</p>
+        </div>
+        <p>e 90 metros de altura.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-251-2de9774f7e64.jpg" alt="Según el caudal del momento y la fuerza del viento, el agua modifica su recorrido y crea cortinas de agua. Espectacular.&lt;table align=&quot;center&quot; cell" loading="lazy" />
+          <p class="caption">Según el caudal del momento y la fuerza del viento, el agua modifica su recorrido y crea cortinas de agua. Espectacular.<table align="center" cell</p>
+        </div>
+        <p>padding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-253-3eb4996e5f44.jpg" alt="La poza es apta para el baño y a veces se ven anguilasY ya en la base crea una poza muy a" loading="lazy" />
+          <p class="caption">La poza es apta para el baño y a veces se ven anguilasY ya en la base crea una poza muy a</p>
+        </div>
+        <p>decuada para el baño, aunque advierten que suele estar fría. Nosotros no la estrenamos. Al parecer allí se avistan anguilas, pero en ese momento no lo sabíamos y no tratamos de encontrar alguna.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-255-9653ec4abb5a.jpg" alt="Como todas las cascadas, suelen llevar más caudal en la temporada de lluvias, aquí de octubre a marzo, por lo que la pillamos iniciando solo su etapa potente. Aquí va un video de la poz" loading="lazy" />
+          <p class="caption">Como todas las cascadas, suelen llevar más caudal en la temporada de lluvias, aquí de octubre a marzo, por lo que la pillamos iniciando solo su etapa potente. Aquí va un video de la poz</p>
+        </div>
+        <p>a.Conocida la poza, seguimos por el litoral hasta que la mencionada tormenta nos forzó a retroceder.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-257-2f58e414a5e6.jpg" alt="Abrupto litoral de Faja Grande Ida y vuelta contemplando un mar bravo golpeando cont" loading="lazy" />
+          <p class="caption">Abrupto litoral de Faja Grande Ida y vuelta contemplando un mar bravo golpeando cont</p>
+        </div>
+        <p>ra los rompientes de lava, con la satisfacción de que esas lluvias darían todavía más vistosidad a las cascadas de Flores.</p>
+        <h2>Miradores</h2>
+        <p>En los paseos en coche por la isla cada poco veíamos paisajes que nos llamaban la atención. Y, en cuanto podíamos, nos deteníamos para contemplarlos. Si podía ser, en un mirador señalizado.</p>
+        <div class="post-image">
+          <img src="/images/azores-259-6715d1b65f5b.jpg" alt="Se convirtió en rutina en una isla tan vistosa y agraciada por la naturaleza." loading="lazy" />
+          <p class="caption">Se convirtió en rutina en una isla tan vistosa y agraciada por la naturaleza.</p>
+        </div>
+        <p>style="text-align: left;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-261-b0cec6080930.jpg" alt="El mar al fondo, valles frondosos, conos volcánicos, un gustazo." loading="lazy" />
+          <p class="caption">El mar al fondo, valles frondosos, conos volcánicos, un gustazo.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-263-6e2742122fa5.jpg" alt="Y aunque no éramos los únicos visitantes recorriendo la isla, normalmente encontrábamos poca gente. La tranquilidad era la norma." loading="lazy" />
+          <p class="caption">Y aunque no éramos los únicos visitantes recorriendo la isla, normalmente encontrábamos poca gente. La tranquilidad era la norma.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-265-caec2e2cea38.jpg" alt="Las carreteras estaban bien pero, eso sí, eran ajustadas, sin arcenes. Había que estacionar como se podía, evitando correr riesgos." loading="lazy" />
+          <p class="caption">Las carreteras estaban bien pero, eso sí, eran ajustadas, sin arcenes. Había que estacionar como se podía, evitando correr riesgos.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-267-ef53a08a8887.jpg" alt="No lo han hecho todavía, pero podían crear una ruta de los miradores." loading="lazy" />
+          <p class="caption">No lo han hecho todavía, pero podían crear una ruta de los miradores.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-269-6191ed89d47f.jpg" alt="Nos convencimos de que el paisaje de Flores justifica la visita a la isla." loading="lazy" />
+          <p class="caption">Nos convencimos de que el paisaje de Flores justifica la visita a la isla.</p>
+        </div>
+        <p>"text-align: left;"></p>
+        <h2>Nuestro Alojamiento: Aldeia da Cuada</h2>
+        <p>Una <a href="https://aldeiadacuada.com/" target="_blank" rel="noopener">antigua aldea de casas de piedra </a>que ha sido recuperada como albergue turístico. Las casas están separadas y alguna incluso alejada, comunicadas por un camino de grandes piedras. Tiene incluso una capilla y la aportación moderna para los viajeros de una piscina descubierta de agua templada.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-271-184b1eafef69.jpg" alt="Vista desde la distancia, cualquiera pensaría que sigue siendo una aldea habitada.&lt;a href=&quot;https://blogger.googleuser" loading="lazy" />
+          <p class="caption">Vista desde la distancia, cualquiera pensaría que sigue siendo una aldea habitada.<a href="https://blogger.googleuser</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-273-389a5890a6a4.jpg" alt="Nuestra casa era de las más grandes, con dos plantas, cinco habitaciones y tres baños. Dos de ellos en la planta baja junto con una enorme cocina-comedor-sala de estar." loading="lazy" />
+          <p class="caption">Nuestra casa era de las más grandes, con dos plantas, cinco habitaciones y tres baños. Dos de ellos en la planta baja junto con una enorme cocina-comedor-sala de estar.</p>
+        </div>
+        <p>/><a</p>
+        <div class="post-image">
+          <img src="/images/azores-275-1d5f56cb046c.jpg" alt="Exterior de nuestra vivienda, rehabilitada con mucho respeto" loading="lazy" />
+          <p class="caption">Exterior de nuestra vivienda, rehabilitada con mucho respeto</p>
+        </div>
+        <p>comunidad de vecinos dedicados a la agricultura y el tejido. Pero en el siglo siguiente una ola de emigración dejó la aldea abandonada. Así permaneció hasta finales del siglo pasado, cuando una pareja inició su recuperación, manteniendo el encanto rústico y preservando la arquitectura tradicional. En total, cuenta con 16 casas restauradas.</p>
+        <div class="post-image">
+          <img src="/images/azores-277-946b15482d52.jpg" alt="El magnífico comedor-cocina de nuestra casa" loading="lazy" />
+          <p class="caption">El magnífico comedor-cocina de nuestra casa</p>
+        </div>
+        <p>or está igualmente recuperado con estilo rural, y como muestra nuestra cocina, con una mesa espectacular.. En esta casa, sin embargo, ofrecían desayunos muy completos y variados, tipo bufé, por 10 euros (café, infusiones, fruta, cereales, bollería y bizcocho casero, queso, platos sencillos de cocina con huevo...). Como tampoco había ningún supermercado cerca, no hicimos casi uso de la cocina.</p>
+        <div class="post-image">
+          <img src="/images/azores-279-83ec33998249.jpg" alt="Las estrechas callejas impiden la entrada de vehículos por Aldeia da Cuada, por lo que el alojamiento se encarga del transporte de las maletas con un dumper, afortunadamente." loading="lazy" />
+          <p class="caption">Las estrechas callejas impiden la entrada de vehículos por Aldeia da Cuada, por lo que el alojamiento se encarga del transporte de las maletas con un dumper, afortunadamente.</p>
+        </div>
+        <p>ign: left;"></p>
+        <div class="post-image">
+          <img src="/images/azores-281-72701b6e7c65.jpg" alt="Una de las habitaciones de nuestra casa" loading="lazy" />
+          <p class="caption">Una de las habitaciones de nuestra casa</p>
+        </div>
+        <p>son sencillas, estilo rural, con escasos muebles, casi ninguno salvo las camas, y pese a los deshumidificadores con algo de olor. Pero no todo eran maravillas. Pese al precio, la casa carecía de lavadora y la wifi se limitaba a la lejana recepción, ambas carencias un problema para el viajero. Pero a juzgar por la que gente que coincidíamos en el desayuno, estaba al completo o casi.</p>
+        <div class="post-image">
+          <img src="/images/azores-283-f624569d92c6.jpg" alt="La piscina de la Aldeia da Cuada, con agua caliente" loading="lazy" />
+          <p class="caption">La piscina de la Aldeia da Cuada, con agua caliente</p>
+        </div>
+        <p>e la Aldeia han construido una piscina, que es un puntazo con su agua entre tibia y caliente, muy agradable. La disfrutamos incluso bajo la lluvia.</p>
+        <div class="post-image">
+          <img src="/images/azores-285-5a5ef2a0f0b6.jpg" alt="Buenavista Café, en el centro de Santa Cruz" loading="lazy" />
+          <p class="caption">Buenavista Café, en el centro de Santa Cruz</p>
+        </div>
+        <p>nas en la propia Aldeia da Cuada, que ofrecía comidas y cenas, previa reserva. En el mismo comedor del desayuno y con una carta amplia, disfrutamos de platos agradables, como hemos dicho a precio Flores, o sea, más caros que en las otras islas.</p>
+        <div class="post-image">
+          <img src="/images/azores-287-bc36ce259f27.jpg" alt="Saliendo del restaurante A Esplanada, en Faja Grande" loading="lazy" />
+          <p class="caption">Saliendo del restaurante A Esplanada, en Faja Grande</p>
+        </div>
+        <p>advisor.es/Restaurant_Review-g1190884-d33111917-Reviews-A_Esplanada-Faja_Grande_Flores_Azores.html" target="_blank">A Esplanada, en Faja Grande. Un sitio bien puesto, amplio, al lado del mar, agradable. La carta era más amplia que la Aldeia y los precios por un estilo, pero buena cocina. En A Esplanada tomamos espetada, arroz con costilla, bacalao en cataplana y cosas así, el precio por persona de 35 a 40 euros. En Aldeia gozamos de unas ricas sopas y buen pescado.</p>
+        <p>En Santa Cruz comimos un día en un restaurante más modesto que podemos calificar de casa de comidas. O Moreao tenía principalmente pescados, con una oferta variada y preparación sencilla. Fue más barato, 22 euros persona.</p>
+        <div class="post-image">
+          <img src="/images/azores-289-7144b6cb74a8.jpg" alt="Y como la isla se llama como se llama...." loading="lazy" />
+          <p class="caption">Y como la isla se llama como se llama....</p>
+        </div>
+        <p>/div><a</p>
+        <div class="post-image">
+          <img src="/images/azores-291-1322de7c3aef.jpg" alt="Despedimos esta crónica con unas imágenes de flores tomadas en la isla de ídem." loading="lazy" />
+          <p class="caption">Despedimos esta crónica con unas imágenes de flores tomadas en la isla de ídem.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-293-1d445e93f833.jpg" alt="Sin olvidarnos de la heladería que utilizaba su alejamiento del continente europeo como un reclamo para sus ventas. Original publicidad.&lt;blockquote style=&quot;border: none; m" loading="lazy" />
+          <p class="caption">Sin olvidarnos de la heladería que utilizaba su alejamiento del continente europeo como un reclamo para sus ventas. Original publicidad.<blockquote style="border: none; m</p>
+        </div>
+        <p>argin: 0px 0px 0px 40px; padding: 0px;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-295-d411a9d688ab.jpg" alt="Y cinco días después de la llegada dejamos Flores camino de Terceira, la cuarta isla que visitábamos. Entre medias hicimos una excursión de una jornada a Corvo, otra joyita que" loading="lazy" />
+          <p class="caption">Y cinco días después de la llegada dejamos Flores camino de Terceira, la cuarta isla que visitábamos. Entre medias hicimos una excursión de una jornada a Corvo, otra joyita que</p>
+        </div>
+        <p>ocupará el siguiente capítulo.</p>
+      </section>
+
+      <section id="corvo" class="island-section">
+        <div class="island-header">
+          <h1 class="island-title">3) Corvo: un volcán transformado en isla mini</h1>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-300-73e961d9867d.jpg" alt="Majestuosa caldera del volcán de Corvo, que ocupa gran parte de esta pequeña islaCorvo es la isla más pequeña de las Az" loading="lazy" />
+          <p class="caption">Majestuosa caldera del volcán de Corvo, que ocupa gran parte de esta pequeña islaCorvo es la isla más pequeña de las Az</p>
+        </div>
+        <p>ores, con diferencia, y, con Flores la más alejada de Europa, situadas ambas en la esquina americana del archipiélago. Poco más de 17 kilómetros cuadrados, 6 por 4 en sus puntos más amplios. Tiene también otras peculiaridades, como la de ser un exiguo territorio alrededor de una caldera volcánica enorme. En Corvo viven 450 personas, según nos explicaron. Claro, todas se conocen. <a</p>
+        <div class="post-image">
+          <img src="/images/azores-301-e017c928bc5b.jpg" alt="Caldera, pueblo y aeropuerto en poco espacio (foto de toazoresislands.com)Y pese a ser tan pocas, dispone de un" loading="lazy" />
+          <p class="caption">Caldera, pueblo y aeropuerto en poco espacio (foto de toazoresislands.com)Y pese a ser tan pocas, dispone de un</p>
+        </div>
+        <p>a pequeña pista de aterrizaje para aviones y algún que otro vuelo doméstico, todo un lujo.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-303-936c84176583.jpg" alt="Como se aprecia en el mapa, Corvo es poco más que la caldera más las laderas del volcán y una pequeña plataforma relativamente plana en el sur. Allí está el pueblecito. En conjunto, un" loading="lazy" />
+          <p class="caption">Como se aprecia en el mapa, Corvo es poco más que la caldera más las laderas del volcán y una pequeña plataforma relativamente plana en el sur. Allí está el pueblecito. En conjunto, un</p>
+        </div>
+        <p>enclave de lo más atractivo.</p>
+        <div class="post-image">
+          <img src="/images/azores-305-90b5c979e4f2.jpg" alt="Impresionante vista aérea de la cara norte de la isla (foto de Viator.com)" loading="lazy" />
+          <p class="caption">Impresionante vista aérea de la cara norte de la isla (foto de Viator.com)</p>
+        </div>
+        <p>impresiona, con esas paredes inaccesibles, donde la actividad humana semeja imposible.</p>
+        <div class="post-image">
+          <img src="/images/azores-307-74a5114bf332.jpg" alt="Zodiac roja en la que fuimos a CorvoDurante los días en la isla de San Miguel estuvimos barajando reservar la excursión a Corv" loading="lazy" />
+          <p class="caption">Zodiac roja en la que fuimos a CorvoDurante los días en la isla de San Miguel estuvimos barajando reservar la excursión a Corv</p>
+        </div>
+        <p>o, pero nos tiraba para atrás el riesgo de los golpes del mar en una lancha tan pequeña por aquello de alguna espalda sensible. Ya en Flores, decidimos informarnos de primera mano y fuimos al puerto cuando llegaban los excursionistas del día en cuestión. En una improvisada encuesta que hicimos a varios visitantes de más o menos nuestra edad, se nos fueron quitando los miedos. Nos aclararon que no había problema alguno y que merecía mucho la pena. Después hablamos con el capitán de la lancha, que nos cayó genial, y nos animó diciendo que en 30 años había llevado a embarazadas, ancianos y demás, sin incidencias dignas de mención. Así que nos apuntamos. En el haber, que uno de los viajeros no pudo conocer Corvo por unos problemas intestinales sobrevenidos, y se lo tuvimos que contar todo. La excursión costó 40 euros.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-309-d3f2b0e5b874.jpg" alt="Listos para navegar hacia CorvoLa excursión a Corvo tiene dos partes: la obvia, conocer la isla, pero otra previa que no fue n" loading="lazy" />
+          <p class="caption">Listos para navegar hacia CorvoLa excursión a Corvo tiene dos partes: la obvia, conocer la isla, pero otra previa que no fue n</p>
+        </div>
+        <p>i mucho menos secundaria: recorrer los acantilados de Flores desde el mar, una auténtica gozada. <a</p>
+        <div class="post-image">
+          <img src="/images/azores-311-98baa260b618.jpg" alt="Salimos de Santa Cruz das Flores al filo de las 9 de la mañana convenientemente pertrechados, con chubasquero y la mochila protegida, e hicimos muy bien. Llovía con cierta intensidad y los va" loading="lazy" />
+          <p class="caption">Salimos de Santa Cruz das Flores al filo de las 9 de la mañana convenientemente pertrechados, con chubasquero y la mochila protegida, e hicimos muy bien. Llovía con cierta intensidad y los va</p>
+        </div>
+        <p>ivenes de la zodiac en un mar picado empapaban la lancha. Durante la noche había diluviado con mucho viento, llegamos a pensar que no habría excursión.</p>
+        <div class="post-image">
+          <img src="/images/azores-313-865d7dfed0e4.jpg" alt="La excursión la formaban dos lanchas que iban juntas en todo momento" loading="lazy" />
+          <p class="caption">La excursión la formaban dos lanchas que iban juntas en todo momento</p>
+        </div>
+        <p>le, bordeando acantilados, penetrando con las lanchas en cuevas de tamaño considerable. Incluso viendo desplomarse cascadas sobre el mar.</p>
+        <div class="post-image">
+          <img src="/images/azores-315-db16f6d13ad1.jpg" alt="Las curiosas formas rocosas que ha moldeado la erosión es de una variedad enorme.." loading="lazy" />
+          <p class="caption">Las curiosas formas rocosas que ha moldeado la erosión es de una variedad enorme..</p>
+        </div>
+        <p>;"></p>
+        <div class="post-image">
+          <img src="/images/azores-317-a07b460b7388.jpg" alt="De cerca se aprecian las rocas con lajas, cuarteadas, con lo que su destino es el fondo del mar... con el tiempo.&lt;" loading="lazy" />
+          <p class="caption">De cerca se aprecian las rocas con lajas, cuarteadas, con lo que su destino es el fondo del mar... con el tiempo.<</p>
+        </div>
+        <p>div></p>
+        <div class="post-image">
+          <img src="/images/azores-319-6f45075943e8.jpg" alt="Pero lo evidente es que mar, viento y lluvia carcomen las rocas, ayudados por árboles que son capaces de crecer en paredes verticales. Y al cabo de miles de años las montañas se trocean." loading="lazy" />
+          <p class="caption">Pero lo evidente es que mar, viento y lluvia carcomen las rocas, ayudados por árboles que son capaces de crecer en paredes verticales. Y al cabo de miles de años las montañas se trocean.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-321-9a47d6e6343a.jpg" alt="Huecos de diseño en un litoral de postal" loading="lazy" />
+          <p class="caption">Huecos de diseño en un litoral de postal</p>
+        </div>
+        <p>gramos hacer fotos vistosas. No hubo que esforzarse mucho, teníamos una sucesión de maravillas ante nosotros.</p>
+        <div class="post-image">
+          <img src="/images/azores-323-a3e5ba1546c7.jpg" alt="Si acaso, lo más delicado era proteger los móviles del mar y de la lluvia, y evitar que en un movimiento brusco acabaran sumergidos." loading="lazy" />
+          <p class="caption">Si acaso, lo más delicado era proteger los móviles del mar y de la lluvia, y evitar que en un movimiento brusco acabaran sumergidos.</p>
+        </div>
+        <p>g="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-325-e10e1423f2b5.jpg" alt="El mar horada las rocas en su base y crea cuevas enormes" loading="lazy" />
+          <p class="caption">El mar horada las rocas en su base y crea cuevas enormes</p>
+        </div>
+        <p>vegando.</p>
+        <p>Vimos unas cuantas cuevas de tamaños diferentes, algunas grandes como la de la imagen superior. Dudábamos que la zodiac se colara en su interior, pero ocurrió.</p>
+        <div class="post-image">
+          <img src="/images/azores-327-d5a34ff8656c.jpg" alt="Y a cubierto de la lluvia pudimos fotografiar el mar y la costa bien protegidos desde su interior" loading="lazy" />
+          <p class="caption">Y a cubierto de la lluvia pudimos fotografiar el mar y la costa bien protegidos desde su interior</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-329-1c54328e9e1a.jpg" alt="Y los saltos de agua llegamos a la conclusión que son marca Flores por su abundancia, en el interior y en la costa." loading="lazy" />
+          <p class="caption">Y los saltos de agua llegamos a la conclusión que son marca Flores por su abundancia, en el interior y en la costa.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-331-ce2a9c5299af.jpg" alt="Nuestro intrépido capitán se acercó a una de ellas lo suficiente para que repartiera agua sobre los viajeros." loading="lazy" />
+          <p class="caption">Nuestro intrépido capitán se acercó a una de ellas lo suficiente para que repartiera agua sobre los viajeros.</p>
+        </div>
+        <p>Encantados, no hubo ni una protesta, aunque el enorme ruido del momento hubiera impedido escucharla.</p>
+        <div class="post-image">
+          <img src="/images/azores-333-b787fdd86b54.jpg" alt="Acercándonos a Corvo, que a poca distancia parece incluso grande" loading="lazy" />
+          <p class="caption">Acercándonos a Corvo, que a poca distancia parece incluso grande</p>
+        </div>
+        <p>fecho, el capitán puso rumbo a Corvo, recorriendo las seis millas náuticas que la separan de Flores en medio de las olas. Se trata de una excursión que realizan a diario si el mar lo permite. Que no es siempre; por ejemplo, el día anterior estuvo picado y no hubo ruta. Según nos dijo, de media van 220 veces al cabo del año. Este día el mar estaba algo movidito y era un poco incómodo por la lluvia, sobre todo a la ida, pero resultó una experiencia imperdible.</p>
+        <div class="post-image">
+          <img src="/images/azores-335-7acfab78d568.jpg" alt="En Corvo la excursión es sencilla, no hay mucho que hacer salvo visitar el pueblo, lo que dejamos para el final, y subir a la caldera, el objetivo fundamental. Recién llegamos nos encontramos" loading="lazy" />
+          <p class="caption">En Corvo la excursión es sencilla, no hay mucho que hacer salvo visitar el pueblo, lo que dejamos para el final, y subir a la caldera, el objetivo fundamental. Recién llegamos nos encontramos</p>
+        </div>
+        <p>con estos molinos, ahora mismo un bien protegido.</p>
+        <div class="post-image">
+          <img src="/images/azores-337-29f8cdef37e8.jpg" alt="Molinos del siglo XIX para moler cereal" loading="lazy" />
+          <p class="caption">Molinos del siglo XIX para moler cereal</p>
+        </div>
+        <p>res de los seis que existieron. Se utilizaban para moler cereal, una función vital en una comunidad aislada que tenía que apañárselas por sus propios medios. Por algo en su momento fue considerado el pueblo más aislado de Portugal.</p>
+        <p>Antes de subir a la caldera le dijimos al taxista si podíamos tomar un café. La carrera estaba tasada: 10 euros persona ida y vuelta, y al llegar arriba se le indica la hora de recogida. Nos paró en un bar junto a la pista de aterrizaje señalando que podíamos dejar las mochilas. Entramos, tomamos algo, visita al baño, lo normal... y al salir el taxi no estaba. Diez minutos después empezábamos a estar mosqueados. En estas pasó un corvino y al conocer nuestra preocupación se echó a reír. "Ha aprovechado el rato para subir a otro grupo, aquí nos conocemos todos y no hay el menor problema". Y así fue, a los pocos minutos estaba allí y nosotros un poco más situados en el minúsculo escenario social y territorial en el que nos encontrábamos. El paisano respondió a nuestras preguntas curiosas y nos contó que en la isla viven unas 450 personas, de las que algo más de 50 son menores. Pueden estudiar allí (cuentan con 23 profesores) y luego irse a la universidad, normalmente a Oporto, Coimbra o Lisboa, aunque reconoció que eran muy pocos los estudiantes que culminaban su carrera.</p>
+        <div class="post-image">
+          <img src="/images/azores-339-1c57d02062d7.jpg" alt="Primera visión de la caldera, con enormes lagos que de lejos parecen pequeños" loading="lazy" />
+          <p class="caption">Primera visión de la caldera, con enormes lagos que de lejos parecen pequeños</p>
+        </div>
+        <p>rirla, por sus dimensiones, enorme (en Terceira veríamos otra aún mayor), y por su belleza. Casi totalmente verde, con una fuerte pendiente, cubierta de agua en su parte baja.</p>
+        <div class="post-image">
+          <img src="/images/azores-341-ba2595f8bfe6.jpg" alt="Listos para descender a la parte baja de la caldera" loading="lazy" />
+          <p class="caption">Listos para descender a la parte baja de la caldera</p>
+        </div>
+        <p>o el suelo estaba empapado y solo la hierba y las rocas impedían que el pie se hundiera, pero estábamos encantados. Y también salió el sol.</p>
+        <div class="post-image">
+          <img src="/images/azores-343-32514bbd2789.jpg" alt="Bajada hasta los lagos sobre un suelo de hierba completamente empapado" loading="lazy" />
+          <p class="caption">Bajada hasta los lagos sobre un suelo de hierba completamente empapado</p>
+        </div>
+        <p>a el fondo de la gigantesca caldera disfrutando de un paisaje especial, de gran belleza y a la vez sumamente sencillo.</p>
+        <div class="post-image">
+          <img src="/images/azores-345-c274105a55ac.jpg" alt="Ganado paciendo en la lejanía, casi parecían puntitos" loading="lazy" />
+          <p class="caption">Ganado paciendo en la lejanía, casi parecían puntitos</p>
+        </div>
+        <p>cia, carece de referencias ante la ausencia de árboles o de algún tipo de relieve (rocas, casas). No parecía tan grande, pero nunca se llegaba al fondo. Y había que ir culebreando a la búsqueda de suelo duro o rocas para no hundir el pie en el agua que fluía por todos lados, algo que en la imagen no se percibe.</p>
+        <p>Pero todas las rocas tenían una gruesa cubierta de musgo y no eran visibles.</p>
+        <div class="post-image">
+          <img src="/images/azores-347-de10267cac3a.jpg" alt="La caldera recoge agua en sus laderas y se acumula en el fondo" loading="lazy" />
+          <p class="caption">La caldera recoge agua en sus laderas y se acumula en el fondo</p>
+        </div>
+        <p>de desnivel y la caldera tiene en su punto máximo un diámetro de 2,3 kilómetros. Dimensiones respetables para un paseo diferente y reconfortante.</p>
+        <div class="post-image">
+          <img src="/images/azores-349-de2ca9a27b05.jpg" alt="Abajo, algunos montículos ocultaban parte de los lagos, más extensos de lo que parecían" loading="lazy" />
+          <p class="caption">Abajo, algunos montículos ocultaban parte de los lagos, más extensos de lo que parecían</p>
+        </div>
+        <p>fondo empezamos a calcular para estar a la hora prevista otra vez arriba. Pronto nos dimos cuenta de que no podríamos circunvalar todos los lagos, que desde la parte superior no eran visibles en su totalidad. Unos montículos tapaban partes y ocultaban zonas de contacto entre ellos.</p>
+        <div class="post-image">
+          <img src="/images/azores-351-0178a0039fce.jpg" alt="Así que hicimos lo que pudimos, atravesando los montículos que se aprecian en la imagen superior. De esta forma acortamos un recorrido que precisaba más tiempo del que en principio supusimos." loading="lazy" />
+          <p class="caption">Así que hicimos lo que pudimos, atravesando los montículos que se aprecian en la imagen superior. De esta forma acortamos un recorrido que precisaba más tiempo del que en principio supusimos.</p>
+        </div>
+        <p>/><a</p>
+        <div class="post-image">
+          <img src="/images/azores-353-b6189be9e7ed.jpg" alt="Empezando la subida hacia el borde de la caldera" loading="lazy" />
+          <p class="caption">Empezando la subida hacia el borde de la caldera</p>
+        </div>
+        <p>íamos descendido, a desandar lo andado. Siempre suele ser más sencillo subir, esfuerzo aparte, pero el agua que bajaba en docenas de pequeñas escorrentías lo complicaba.</p>
+        <div class="post-image">
+          <img src="/images/azores-355-3a3afd39b250.jpg" alt="Sin incidencias y a la hora convenida el grupo se reunió arriba, y con el taxi bajamos al pueblo, teníamos todavía un par de horas para dar una vuelta. En total, dedicamos dos horas y me" loading="lazy" />
+          <p class="caption">Sin incidencias y a la hora convenida el grupo se reunió arriba, y con el taxi bajamos al pueblo, teníamos todavía un par de horas para dar una vuelta. En total, dedicamos dos horas y me</p>
+        </div>
+        <p>dia a la caldera. Quizás podíamos haber alargado un poco más el paseo.</p>
+        <div class="post-image">
+          <img src="/images/azores-357-ad52ab2f3acc.jpg" alt="Vila de Corvo y su puerto desde las alturas, una población vistosa" loading="lazy" />
+          <p class="caption">Vila de Corvo y su puerto desde las alturas, una población vistosa</p>
+        </div>
+        <p>descubrimos una malla urbana casi medieval, con callejas estrechas, a veces laberínticas, y suelos empedrados.</p>
+        <div class="post-image">
+          <img src="/images/azores-359-68f82f98edf1.jpg" alt="Calle modelo de Corvo, angosta y con suelo de piedra" loading="lazy" />
+          <p class="caption">Calle modelo de Corvo, angosta y con suelo de piedra</p>
+        </div>
+        <p>desde que era una forma de protegerse de las incursiones de piratas, que hubo varias, y también para protegerse de los fuertes vientos que allí soplan. Están pegadas las casas, casi abigarradas, y carecen de huerta o patio, en contra de lo habitual en las zonas rurales. Forman un conjunto agradable, con una tipología muy uniforme en cuanto a volúmenes y ventanas.</p>
+        <div class="post-image">
+          <img src="/images/azores-361-0ecd8e45eead.jpg" alt="En el paseo nos encontramos con dos museos, uno referido a la creación de la isla y su pasado geológico, vegetación y aspectos naturales. El primero mostraba vídeos y gráficos para entender el proceso" loading="lazy" />
+          <p class="caption">En el paseo nos encontramos con dos museos, uno referido a la creación de la isla y su pasado geológico, vegetación y aspectos naturales. El primero mostraba vídeos y gráficos para entender el proceso</p>
+        </div>
+        <p>de creación de la isla.</p>
+        <div class="post-image">
+          <img src="/images/azores-363-c52e3eee700e.jpg" alt="El segundo etnográfico, referido a la vida de los isleños en el pasado. En este último con herramientas agrícolas, de carpintería y de otros oficios, imprescindibles para" loading="lazy" />
+          <p class="caption">El segundo etnográfico, referido a la vida de los isleños en el pasado. En este último con herramientas agrícolas, de carpintería y de otros oficios, imprescindibles para</p>
+        </div>
+        <p>la vida en un lugar apartado de todo y en el que los suministros debían llegar por barco, un sistema caro, lento y siempre impreciso. También nos encontramos con un centro de interpretación de aves, pero ya no disponíamos de tiempo.</p>
+        <div class="post-image">
+          <img src="/images/azores-365-913c1d7ebd30.jpg" alt="Así la describió este autor hace un siglo" loading="lazy" />
+          <p class="caption">Así la describió este autor hace un siglo</p>
+        </div>
+        <p>gobierno regional para la atención, insólito en un lugar tan minúsculo.</p>
+        <div class="post-image">
+          <img src="/images/azores-367-87043d8a8f09.jpg" alt="Reconfortados por estas instalaciones culturales, paseamos el pueblo hasta la hora de la salida del barco. Una excursión excelente y una vez conocida la isla entendimos que aquellos que quieren un ento" loading="lazy" />
+          <p class="caption">Reconfortados por estas instalaciones culturales, paseamos el pueblo hasta la hora de la salida del barco. Una excursión excelente y una vez conocida la isla entendimos que aquellos que quieren un ento</p>
+        </div>
+        <p>rno sereno y remoto se vengan a una isla como Corvo, que ambas cosas las borda. Al parecer, al igual que ocurre en Flores, recibe también muchas visitas de personas interesadas en la observación de las aves. No era nuestro caso, pero disfrutamos mucho del día.</p>
+        <p>El viaje de vuelta en la lancha resultó muy tranquilo y placentero. Después del húmedo comienzo de la jornada, el sol decidió hacer acto de presencia y acompañarnos unas buenas horas, cosa que aportó una luminosidad inesperada a la visita. Así que sobre las cuatro de la tarde volvíamos al puerto de Flores con el convencimiento de que habíamos estado en un sitio de esos cuyas imágenes te acompañan para siempre en el corazón.</p>
+      </section>
+
+      <section id="terceira" class="island-section">
+        <div class="island-header">
+          <h1 class="island-title">4) Terceira: Patrimonio de la Humanidad y mucha belleza</h1>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-372-ad1f128cc56b.jpg" alt="Iglesia de la Misericordia de Angra (siglo XVIII) y delante las Puertas del MarLa tercera isla de las Azores en ser descubiert" loading="lazy" />
+          <p class="caption">Iglesia de la Misericordia de Angra (siglo XVIII) y delante las Puertas del MarLa tercera isla de las Azores en ser descubiert</p>
+        </div>
+        <p>a, a la que pusieron por nombre Terceira, vete a saber por qué obviedad, es sin duda un lugar interesante. Su relevancia se constató cuando la Unesco le otorgó la distinción de Patrimonio de la Humanidad a su capital, Angra do Heroísmo (ya hablaremos de este apellido). <a</p>
+        <div class="post-image">
+          <img src="/images/azores-373-4432951cbb60.jpg" alt="Mural de autopromoción angrenseSu centro histórico recibió este galardón en 1983 y, posteriormente, se" loading="lazy" />
+          <p class="caption">Mural de autopromoción angrenseSu centro histórico recibió este galardón en 1983 y, posteriormente, se</p>
+        </div>
+        <p>le unió la isla de Pico con su paisaje vitivinícola (2004). En Angra encontramos un mural callejero que recuerda este hito, obra de Nathan Luiz Ortix y realizado en 2024<a</p>
+        <div class="post-image">
+          <img src="/images/azores-375-f72113a801cd.jpg" alt="Increíble paisaje de montaña en la caminata que hicimos en SerretaExhibe también unos paisajes de montaña excepciona" loading="lazy" />
+          <p class="caption">Increíble paisaje de montaña en la caminata que hicimos en SerretaExhibe también unos paisajes de montaña excepciona</p>
+        </div>
+        <p>les, que disfrutamos durante una caminata circular algo dura en Serreta al final de la estancia. Musgos enormes cubren sus rocas en unos parajes casi de cuento.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-377-ae84844dd399.jpg" alt="Emblemático mirador en la Serra do CumeDestaca igualmente su antiguo paisaje volcánico, con un mirador impresionant" loading="lazy" />
+          <p class="caption">Emblemático mirador en la Serra do CumeDestaca igualmente su antiguo paisaje volcánico, con un mirador impresionant</p>
+        </div>
+        <p>e sobre la caldera de la Serra do Cume. Ante el visitante, un enorme mosaico de campos verdes, muros de piedra volcánica y una enorme sensación de paz. De todo ello y algo más va esta entrada que ahora comienza.</p>
+        <div class="post-image">
+          <img src="/images/azores-379-b2c15d79e995.jpg" alt="La isla en sí es de las más regulares del archipiélago, redondita y sin accidentes geográficos llamativos, a excepción del grano que supone el monte Brasil en su capital, Angra do Heroísmo. Terceira tiene 400 kil" loading="lazy" />
+          <p class="caption">La isla en sí es de las más regulares del archipiélago, redondita y sin accidentes geográficos llamativos, a excepción del grano que supone el monte Brasil en su capital, Angra do Heroísmo. Terceira tiene 400 kil</p>
+        </div>
+        <p>ómetros cuadrados de extensión (18 de ancho y 29 de largo en sus puntos máximos), unos 60.000 habitantes y además de Angra, que es una de las tres capitales de Azores, una segunda ciudad importante, Praia da Victoria. Angra es igualmente sede de la principal universidad azoriana.</p>
+        <div class="post-image">
+          <img src="/images/azores-381-239be7a74c4b.jpg" alt="Llegamos en nuestro segundo vuelo interno con la aerolínea Sata procedentes de Flores, y todo fue bien a excepción de un pequeño retraso en la salida. Era el segundo y último vuelo de estas caracte" loading="lazy" />
+          <p class="caption">Llegamos en nuestro segundo vuelo interno con la aerolínea Sata procedentes de Flores, y todo fue bien a excepción de un pequeño retraso en la salida. Era el segundo y último vuelo de estas caracte</p>
+        </div>
+        <p>rísticas, pues cinco días después volveríamos al aeropuerto de Lajes para regresar a Oporto ya en un avión grande.</p>
+        <p>Este aeropuerto comparte doble función, civil para vuelos ordinarios y tiene anexa una base militar operada por Portugal y Estados Unidos en la que existe una dotación norteamericana. Precisamente en esta base se tomó en marzo de 2003 la famosa foto del trío de las Azores (George Bush, Toni Blair y José María Aznar), en la que se decidió la catastrófica invasión de Irak, de triste recuerdo. En el viaje rememoramos esa foto en plan de coña.</p>
+        <p>Tras llegar nos dirigimos a nuestro alojamiento en Porto Martins, dentro del municipio de Praia Victoria, en el este de la isla. Al final de la entrada hablaremos de la casa.</p>
+        <h2>Angra do Heroísmo</h2>
+        <p>Estuvimos en varias ocasiones en Angra do Heroísmo, que a partir de este momento y a efectos del blog pasa a ser solo Angra. Para dejar de lado su apellido contaremos sucintamente de donde proviene este apelativo grandilocuente de una ciudad con historia y un centro urbano atractivo. Angra viene a significar ensenada o bahía, en alusión al lugar donde se levantó la ciudad, y conforma un lugar de abrigo para barcos gracias al saliente del monte Brasil. Fundada en 1534, tiene en su currículum haber sido la primera población de Azores que recibió el título de ciudad. Pero el apellido de Heroísmo le llegaría tres siglos después, otorgado por la reina María II por su apoyo a los liberales en las guerras civiles de finales de la década de 1830.</p>
+        <div class="post-image">
+          <img src="/images/azores-383-3d21060723d7.jpg" alt="Fuerte de San Sebastián, en el lado este de la bahía de Angra" loading="lazy" />
+          <p class="caption">Fuerte de San Sebastián, en el lado este de la bahía de Angra</p>
+        </div>
+        <p>se aprecia nada más llegar a la ciudad. Aparcamos fuera del centro histórico, junto a la plaza de toros (hablaremos de ella) y bajamos andando hacia la costa, donde nos encontramos con el fuerte de San Sebastián. Imponente aún hoy, su destino presente es muy diferente al militar.</p>
+        <div class="post-image">
+          <img src="/images/azores-385-31945ac2bf30.jpg" alt="Murallas del fuerte de San Sebastián" loading="lazy" />
+          <p class="caption">Murallas del fuerte de San Sebastián</p>
+        </div>
+        <p>tros paradores nacionales. Se accede por la puerta del castillo, pero una vez dentro la actividad castrense se ha esfumado.</p>
+        <div class="post-image">
+          <img src="/images/azores-387-846b7e68e5e0.jpg" alt="Interior del fuerte de San Sebastián, ahora un hotel de diseño" loading="lazy" />
+          <p class="caption">Interior del fuerte de San Sebastián, ahora un hotel de diseño</p>
+        </div>
+        <p>e lo impedía. Así que entramos al recinto interior de las murallas, un lugar cuidado como corresponde a un hotel de alta gama. Resultaba evidente que los niveles del suelo en el interior habían sido modificados, pero obviamente su finalidad ahora no es defensiva.</p>
+        <div class="post-image">
+          <img src="/images/azores-389-dcb817c93573.jpg" alt="Vista de Angra desde el fuerte de San Sebastián" loading="lazy" />
+          <p class="caption">Vista de Angra desde el fuerte de San Sebastián</p>
+        </div>
+        <p>to deportivo y el conjunto de la ciudad, con un skyline conservado, sin edificios modernos que lo trastoquen. Al otro lado de la bahía, el segundo fuerte de Angra, el mayor, la fortaleza de San Juan Bautista.</p>
+        <div class="post-image">
+          <img src="/images/azores-391-4e1888f51442.jpg" alt="Y cerca del puerto deportivo, en el centro de la ciudad, una playa con pinta de artificial, el único arenal que vimos por la zona." loading="lazy" />
+          <p class="caption">Y cerca del puerto deportivo, en el centro de la ciudad, una playa con pinta de artificial, el único arenal que vimos por la zona.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-393-2350ca5e4871.jpg" alt="&lt;/blo" loading="lazy" />
+          <p class="caption"></blo</p>
+        </div>
+        <p>ckquote>Descendiendo del fuerte bordeamos el puerto deportivo, llenito de embarcaciones. No vimos ninguna navegando, pero docenas atracadas.</p>
+        <div class="post-image">
+          <img src="/images/azores-395-0d5df4fbf117.jpg" alt="Portas do Mar y al fondo la antigua alfandega (aduana)" loading="lazy" />
+          <p class="caption">Portas do Mar y al fondo la antigua alfandega (aduana)</p>
+        </div>
+        <p>nidad. Lo primero de todo, las Puertas del Mar y detrás de ellas la antigua aduana.</p>
+        <div class="post-image">
+          <img src="/images/azores-397-c671bee25110.jpg" alt="Reloj de horas y días de la semana" loading="lazy" />
+          <p class="caption">Reloj de horas y días de la semana</p>
+        </div>
+        <p>viajeros desembarcaban e inmediatamente eran sometidos a inspección. Con los rellenos, como en Ponta Delgada y casi cualquier ciudad costera, el mar se ha alejado del núcleo urbano. En el vestíbulo de la vieja aduana en una pared colgaba un viejo y curioso reloj, que además de las horas y el día del mes informaba igualmente del día de la semana.</p>
+        <div class="post-image">
+          <img src="/images/azores-399-72d6720431ee.jpg" alt="Estatua de Vasco de Gama, quien desembarcó aquí en 1499" loading="lazy" />
+          <p class="caption">Estatua de Vasco de Gama, quien desembarcó aquí en 1499</p>
+        </div>
+        <p>nto, y tres de los viajeros no se resistieron a inmortalizarse con Vasco de Gama, el primer navegante que hizo el viaje directo entre Portugal y la India, dando al vuelta a África por el cabo de Buena Esperanza. Fue un hito que lo convirtió en héroe nacional, aunque también se recuerda su brutalidad. La escultura data de 1883.</p>
+        <div class="post-image">
+          <img src="/images/azores-401-4f2451dc45f1.jpg" alt="Desde la iglesia nos dedicamos a recorrer las calles centrales, Santo Espíritu, Dereita, Boa Nova y otras." loading="lazy" />
+          <p class="caption">Desde la iglesia nos dedicamos a recorrer las calles centrales, Santo Espíritu, Dereita, Boa Nova y otras.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-403-1046312c4b6e.jpg" alt="Algunas de ellas están peatonalizadas y todas muy cuidadas, con edificios pintados en colores varios, pero todos o casi en estado de revista." loading="lazy" />
+          <p class="caption">Algunas de ellas están peatonalizadas y todas muy cuidadas, con edificios pintados en colores varios, pero todos o casi en estado de revista.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-405-28c4cb4e8624.jpg" alt="Tienen estas calles comercios muy interesantes, incluso los que ofrecían recuerdos lucen un toque particular. Nada que ver con la mayoría de los que existen en el centro de las ciudades turíst" loading="lazy" />
+          <p class="caption">Tienen estas calles comercios muy interesantes, incluso los que ofrecían recuerdos lucen un toque particular. Nada que ver con la mayoría de los que existen en el centro de las ciudades turíst</p>
+        </div>
+        <p>icas.</p>
+        <div class="post-image">
+          <img src="/images/azores-407-ed1eef0e3113.jpg" alt="Plaza del Ayuntamiento, con la sede municipal al fondo" loading="lazy" />
+          <p class="caption">Plaza del Ayuntamiento, con la sede municipal al fondo</p>
+        </div>
+        <p>amplia y solo cerrada al tráfico en la puerta de la casa municipal. Una agradable terraza dependiente de una pastelería del otro lado de la calle nos sirvió de descanso y para jugar alguna partida al chinchimonis. La pena eran los coches y motos que pasaban con los motores revolucionados, pero qué se le iba a hacer, estábamos en pleno centro.</p>
+        <div class="post-image">
+          <img src="/images/azores-409-a8551a07a412.jpg" alt="Jardines en el casco urbano de la ciudad de Angra" loading="lazy" />
+          <p class="caption">Jardines en el casco urbano de la ciudad de Angra</p>
+        </div>
+        <p>levan a la parte más alta de la ciudad. Callejeamos también esta zona, y además de edificios interesantes encontramos unos cuidados jardines. Vallados en su totalidad, los carteles informaban que a las ocho de la tarde se cerraban. En estos jardines localizamos el monumento a Almeida Garret, considerado impulsor del romanticismo en Portugal y destacado político liberal. Al parecer tuvo que ver con el añadido a Heroísmo al nombre de Angra.</p>
+        <div class="post-image">
+          <img src="/images/azores-411-5e774e7eb49b.jpg" alt="Monumento al escritor y político Almeida Garrett" loading="lazy" />
+          <p class="caption">Monumento al escritor y político Almeida Garrett</p>
+        </div>
+        <p>agitada, exiliado, escritor, ministro, diplomático en Bruselas... que en parte se recoge en la placa colocada al lado del monumento.</p>
+        <div class="post-image">
+          <img src="/images/azores-413-a0201599d60d.jpg" alt="Almeida había recalado en las Azores huyendo de la invasión napoleónica. Finalizada, regresó al continente." loading="lazy" />
+          <p class="caption">Almeida había recalado en las Azores huyendo de la invasión napoleónica. Finalizada, regresó al continente.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-415-9ef8fcc41224.jpg" alt="Pero Angra no solo ha crecido hacia el interior de la isla, también se ha extendido por la zona litoral, al oeste, para conectar con el monte Brasil. Allí se encuentra la segunda fortaleza, mucho mayor que la" loading="lazy" />
+          <p class="caption">Pero Angra no solo ha crecido hacia el interior de la isla, también se ha extendido por la zona litoral, al oeste, para conectar con el monte Brasil. Allí se encuentra la segunda fortaleza, mucho mayor que la</p>
+        </div>
+        <p>de San Sebastián.</p>
+        <div class="post-image">
+          <img src="/images/azores-417-16b1c78104fb.jpg" alt="Playa en el centro de Angra" loading="lazy" />
+          <p class="caption">Playa en el centro de Angra</p>
+        </div>
+        <p>cañones, recorrimos un barrio de calles estrechas, cuadriculadas y aspecto antiguo. Está situado sobre la playa.</p>
+        <div class="post-image">
+          <img src="/images/azores-419-fe6e663ed5a1.jpg" alt="Pasaban coches, lo que nos obligaba a buscar protección dada su estrechez. Vimos algunos restaurantes, hoteles cuidados, casas bien conservadas y otras que necesitaban una mano de pintura.&lt;/di" loading="lazy" />
+          <p class="caption">Pasaban coches, lo que nos obligaba a buscar protección dada su estrechez. Vimos algunos restaurantes, hoteles cuidados, casas bien conservadas y otras que necesitaban una mano de pintura.</di</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-421-4875e60c1768.jpg" alt="Retrato de grupo en una cámara pública y gratuita" loading="lazy" />
+          <p class="caption">Retrato de grupo en una cámara pública y gratuita</p>
+        </div>
+        <p>gra por la calle de la Catedral. Este templo y la iglesia de la Misericordia solo los visitaron algunos miembros del grupo, ya que aplicaban una tasa de entrada de tres euros. En una plaza de esta calle, ya cerca del monte Brasil, nos inmortalizamos en una pantalla callejera instalada por el Ayuntamiento. Muy modernos en Angra..</p>
+        <div class="post-image">
+          <img src="/images/azores-423-f8614572b8f3.jpg" alt="Antes de entrar en el recinto militar nos encontramos con una enorme fuente tipo bebedero, con un nombre curioso, Tanque do Azeite." loading="lazy" />
+          <p class="caption">Antes de entrar en el recinto militar nos encontramos con una enorme fuente tipo bebedero, con un nombre curioso, Tanque do Azeite.</p>
+        </div>
+        <p>none; margin: 0px 0px 0px 40px; padding: 0px;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-425-d73577596bf2.jpg" alt="Por mucho que buscamos no encontramos información sobre este nombre, ni si tenía alguna relación con el aceite. Solo que se construyó a finales" loading="lazy" />
+          <p class="caption">Por mucho que buscamos no encontramos información sobre este nombre, ni si tenía alguna relación con el aceite. Solo que se construyó a finales</p>
+        </div>
+        <p>del siglo XVI.</p>
+        <div class="post-image">
+          <img src="/images/azores-427-c8dd9810ab77.jpg" alt="Entrada a la fortaleza de San Juan Bautista, cerrada a las visitas" loading="lazy" />
+          <p class="caption">Entrada a la fortaleza de San Juan Bautista, cerrada a las visitas</p>
+        </div>
+        <p>s al fuerte principal del complejo. La puerta estaba cerrada y sin indicación alguna sobre la posibilidad de visitarlo, tuvimos que conformarnos con el exterior. Lo más curioso es que se trata de la mayor fortaleza construida por España fuera de la península. Además del castillo, largas murallas, hasta cuatro kilómetros y en distintos niveles, circunvalan el monte Brasil con varios bastiones defensivos.</p>
+        <div class="post-image">
+          <img src="/images/azores-429-b5cd3d7bc29c.jpg" alt="Puente de piedra para acceder al castillo, en origen un puente levadizo" loading="lazy" />
+          <p class="caption">Puente de piedra para acceder al castillo, en origen un puente levadizo</p>
+        </div>
+        <p>0 soldados y 400 piezas de artillería, Pero si militarmente era inexpugnable, siempre hay otros factores en juego. Así, en 1642, la guarnición española tuvo que rendirse a los portugueses tras la independencia lusa después de 60 años integrada en la corona española. El cerco del fuerte duró casi un año y la partida se decidió por la contaminación de los depósitos de agua, que provocó una epidemia entre los defensores.</p>
+        <p>Este complejo militar fue clave para garantizar la seguridad de los envíos de plata desde las colonias españolas en América, junto con los de Cartagena de Indias y La Habana, lugares donde los barcos recalaban con seguridad. Además de cuartel militar, posteriormente ha sido cárcel para presos políticos (1926) y también albergó cinco años al rey Alfonso VI de Portugal durante su exilio (1669-1674). Un lugar con historia.</p>
+        <div class="post-image">
+          <img src="/images/azores-431-8b8dfe853cf9.jpg" alt="Recuerdo de la llegada del ejército británico" loading="lazy" />
+          <p class="caption">Recuerdo de la llegada del ejército británico</p>
+        </div>
+        <p>e y de esparcimiento, y en ella encontramos una placa de metal de dimensiones considerables. Conmemora la llegada a Terceira de un importante contingente militar británico en 1943, en plena Segunda Guerra Mundial. Es evidente que las Azores, y de manera singular Terceira, tienen un pasado militar destacado. Incluso presente con la base americana de Lajes.</p>
+        <div class="post-image">
+          <img src="/images/azores-433-bce592d4654a.jpg" alt="Monumento a los presos políticos (2022)" loading="lazy" />
+          <p class="caption">Monumento a los presos políticos (2022)</p>
+        </div>
+        <p>la fortaleza se recuerda en el monumento, bello y original, que nos encontramos en el parque municipal de Relvao. Vista de frente o desde atrás parece una sucesión de líneas metálicas.</p>
+        <div class="post-image">
+          <img src="/images/azores-435-bd19c54e8374.jpg" alt="Pero desde un lateral la escultura cobra vida. Está dedicado a los presos políticos, tanto de la dictadura salazarista del siglo pasado como de otras épocas, lo que se detalla en la base de mármol. Obra" loading="lazy" />
+          <p class="caption">Pero desde un lateral la escultura cobra vida. Está dedicado a los presos políticos, tanto de la dictadura salazarista del siglo pasado como de otras épocas, lo que se detalla en la base de mármol. Obra</p>
+        </div>
+        <p>del escultor Julian Voss-Andreae, de origen alemán pero residente en Estados Unidos.</p>
+        <div class="post-image">
+          <img src="/images/azores-437-3e5c04138a5f.jpg" alt="Claustro del convento de San Gonzalo" loading="lazy" />
+          <p class="caption">Claustro del convento de San Gonzalo</p>
+        </div>
+        <p>rimer y mayor complejo conventual de Angra (1545). Su exterior e incluso el claustro que pudimos visitar (hay otro que no nos mostraron) son sencillos, pero no así su iglesia.</p>
+        <div class="post-image">
+          <img src="/images/azores-439-1f0b0667bf0d.jpg" alt="Iglesia del convento de San Gonzalo con sus espectaculares mosaicos" loading="lazy" />
+          <p class="caption">Iglesia del convento de San Gonzalo con sus espectaculares mosaicos</p>
+        </div>
+        <p>, caso del retablo dorado, pinturas y esculturas del siglo XVIII, paneles de azulejos de ese mismo siglo y el XVII. Una monja caboverdiana nos mostró el recinto (3,5 euros persona de entrada), y nos refirió el declive de la orden de las clarisas, que llegó a tener un centenar de religiosas en este convento y ahora solamente son tres.</p>
+        <div class="post-image">
+          <img src="/images/azores-441-9c5ed3d72bfa.jpg" alt="Imponente reja ovalada del convento, junto a ella la monja que nos lo mostró" loading="lazy" />
+          <p class="caption">Imponente reja ovalada del convento, junto a ella la monja que nos lo mostró</p>
+        </div>
+        <p>mo tal ha desaparecido por falta de religiosas y tiene en su interior una residencia para mujeres con problemas (y sus hijos) y un centro escolar. Y suponemos que aceptan visitas como la nuestra para tener otros ingresos. Nos llamó la atención en la visita el lugar donde las monjas clarisas podían recibir puntualmente la visita de familiares.... separados por una doble reja con un espacio entre medias; o sea, bien alejados y sin el menor contacto físico.</p>
+        <div class="post-image">
+          <img src="/images/azores-443-3fa84457fd4b.jpg" alt="Ábside del templo con el retablo dorado" loading="lazy" />
+          <p class="caption">Ábside del templo con el retablo dorado</p>
+        </div>
+        <p>uación actual pueda mantenerse. Que tres religiosas puedan conservar un recinto tan enorme, aunque ya no sean clarisas y tengan una relación más abierta a la sociedad. El interior del convento cuando lo recorrimos olía fuertemente a humedad.</p>
+        <div class="post-image">
+          <img src="/images/azores-445-e583c7197b9e.jpg" alt="Y antes de pasar la página de Angra, dejar constancia del vestíbulo que nos llamó la atención en una casa del centro histórico," loading="lazy" />
+          <p class="caption">Y antes de pasar la página de Angra, dejar constancia del vestíbulo que nos llamó la atención en una casa del centro histórico,</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-447-cfee7928a1e0.jpg" alt="de un bonito gato dormitando sobre nuestras cabezas," loading="lazy" />
+          <p class="caption">de un bonito gato dormitando sobre nuestras cabezas,</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-449-a5e0e4dde397.jpg" alt="y de las existencia de una plaza de toros en uso (en Portugal no se mata a los toros), la única del archipiélago, y delante de ella un llamativo conjunto escultórico. Aclarar que el grupo de v" loading="lazy" />
+          <p class="caption">y de las existencia de una plaza de toros en uso (en Portugal no se mata a los toros), la única del archipiélago, y delante de ella un llamativo conjunto escultórico. Aclarar que el grupo de v</p>
+        </div>
+        <p>isitantes rechaza frontalmente esta cruel actividad.</p>
+        <div class="post-image">
+          <img src="/images/azores-451-f33fb0918844.jpg" alt="Como despedida de la ciudad, su preciosa iglesia portuaria de la Misericordia, esbelta y atractiva. Y dejar constancia del resultado electoral, ya que las elecciones municipales se" loading="lazy" />
+          <p class="caption">Como despedida de la ciudad, su preciosa iglesia portuaria de la Misericordia, esbelta y atractiva. Y dejar constancia del resultado electoral, ya que las elecciones municipales se</p>
+        </div>
+        <p>celebraron estando nosotros en Azores. El Partido Socialista retuvo la alcaldía de Angra con un 56% de los votos.</p>
+        <h2>Praia da Victoria</h2>
+        <div class="post-image">
+          <img src="/images/azores-453-b0d5d5384418.jpg" alt="Vista de Praia da Victoria desde el cerro del Corazón de María" loading="lazy" />
+          <p class="caption">Vista de Praia da Victoria desde el cerro del Corazón de María</p>
+        </div>
+        <p>gra, menos monumental aunque tiene un coqueto casco histórico menos extenso. Originalmente su nombre era solo Praia, y lo mismo que Angra, la lucha entre liberales y absolutistas le añadió el apellido Victoria. Ocurrió en 1829 tras el triunfo de los liberales frente a los absolutistas de D. Miguel.</p>
+        <div class="post-image">
+          <img src="/images/azores-455-e57d6662b58a.jpg" alt="Estuvimos allí una mañana y la recorrimos con tranquilidad. Comprobamos que está claramente dividida: una zona litoral de servicios, con la pla" loading="lazy" />
+          <p class="caption">Estuvimos allí una mañana y la recorrimos con tranquilidad. Comprobamos que está claramente dividida: una zona litoral de servicios, con la pla</p>
+        </div>
+        <p>ya, el puerto deportivo y hoteles, y la interior, alrededor de las iglesias y los edificios de época, el casco histórico.</p>
+        <div class="post-image">
+          <img src="/images/azores-457-8f3fa267e498.jpg" alt="En lo alto del monte, monumento al Corazón Inmaculado de María" loading="lazy" />
+          <p class="caption">En lo alto del monte, monumento al Corazón Inmaculado de María</p>
+        </div>
+        <p>00;">En un extremo de la playa, sobre un pequeño monte, construyeron a finales del siglo pasado (1983/1999) un monumento al Corazón Inmaculado de María que como poco se puede calificar de soso, tipo soviético. Pese a sus 16 metros de altura, lo único que destaca es un pedestal enorme y una imagen minúscula.</p>
+        <div class="post-image">
+          <img src="/images/azores-459-1dd448bb94a9.jpg" alt="Ascenso por una escalinata en tramos al monumento a la virgen" loading="lazy" />
+          <p class="caption">Ascenso por una escalinata en tramos al monumento a la virgen</p>
+        </div>
+        <p>jenos a su significado religioso, decidimos subir para contemplar la vista de Praia Victoria. Fueron 284 escalones en una mañana soleada, ni uno más ni uno menos, y ni siquiera seguidos. En cada terraza habían colocado las escaleras a la siguiente en el extremo opuesto, obligando a recorrer completo cada nivel.</p>
+        <div class="post-image">
+          <img src="/images/azores-461-db05c3f872f3.jpg" alt="Una vez arriba, ratito de descanso y para abajo a fin de visitar la parte interior del pueblo.&lt;span sty" loading="lazy" />
+          <p class="caption">Una vez arriba, ratito de descanso y para abajo a fin de visitar la parte interior del pueblo.<span sty</p>
+        </div>
+        <p>le="font-weight: 400;"></p>
+        <div class="post-image">
+          <img src="/images/azores-463-819b17d77572.jpg" alt="Antes del descenso disfrutamos de la vista y de la amplia bahía de esta ciudad.&lt;span style=&quot;font-weight:" loading="lazy" />
+          <p class="caption">Antes del descenso disfrutamos de la vista y de la amplia bahía de esta ciudad.<span style="font-weight:</p>
+        </div>
+        <p>400;"></p>
+        <div class="post-image">
+          <img src="/images/azores-465-a610822a3714.jpg" alt="Arenal de Praia Victoria, el mejor que vimos en las Azores" loading="lazy" />
+          <p class="caption">Arenal de Praia Victoria, el mejor que vimos en las Azores</p>
+        </div>
+        <p>>Una vez en el paseo marítimo, una pareja del grupo se animó a darse un baño en la playa y relataron una experiencia muy satisfactoria.</p>
+        <div class="post-image">
+          <img src="/images/azores-467-df5b2d243e9e.jpg" alt="Ante la biblioteca municipal Silvestre Ribeiro" loading="lazy" />
+          <p class="caption">Ante la biblioteca municipal Silvestre Ribeiro</p>
+        </div>
+        <p>de calle rectilíneas con placitas, edificios históricos y algunos monumentos.</p>
+        <div class="post-image">
+          <img src="/images/azores-469-377d74c706cd.jpg" alt="Es una pequeña ciudad agradable, sin grandes maravillas." loading="lazy" />
+          <p class="caption">Es una pequeña ciudad agradable, sin grandes maravillas.</p>
+        </div>
+        <p>uto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-471-a2a6b935ebdb.jpg" alt="El Ayuntamiento, como en San Miguel, con torre sineira y escaleras a la primera planta" loading="lazy" />
+          <p class="caption">El Ayuntamiento, como en San Miguel, con torre sineira y escaleras a la primera planta</p>
+        </div>
+        <p>destacados es la sede municipal, del siglo XVII, levantado después de que en 1614 un terremoto destruyera la anterior. Construido en piedra volcánica y en parte encalado.</p>
+        <div class="post-image">
+          <img src="/images/azores-473-b35beab56b8b.jpg" alt="Iglesia matriz de Santa Cruz," loading="lazy" />
+          <p class="caption">Iglesia matriz de Santa Cruz,</p>
+        </div>
+        <p>weight: 400;">Llamativa también la iglesia de la Santa Cruz, de finales del siglo XV, pero al igual que el ayuntamiento, reconstruida en el XIX tras los daños causados por un terremoto en 1841. Pese a ello, mantiene vestigios de su estilo manuelino. Las obras hasta completarla duraron más de sesenta años.</p>
+        <div class="post-image">
+          <img src="/images/azores-475-dbb79044ba75.jpg" alt="Destaca su pórtico y en su interior guarda una rar" loading="lazy" />
+          <p class="caption">Destaca su pórtico y en su interior guarda una rar</p>
+        </div>
+        <p>a escultura indo-portuguesa de marfil policromado, pero estaba cerrada y no pudimos verla.</p>
+        <div class="post-image">
+          <img src="/images/azores-477-ecf007d694ef.jpg" alt="Calle de Jesús, la vía comercial por excelencia y además peatonal" loading="lazy" />
+          <p class="caption">Calle de Jesús, la vía comercial por excelencia y además peatonal</p>
+        </div>
+        <p>ght: bold;">Llegamos por fin a la calle de Jesús, un vial rectilíneo, bastante largo, la arteria comercial y el sitio de paseo al tratarse de una calle sin coches. Vistosa y colorida, en la foto no aparece gente pero la había y en abundancia. Casas con aldaba, balcones coloridos, inmuebles cuidados y empedrado decorado conforman una calle que anima a recorrerla. En algunas paredes de esta villa figuraban versos de poetas locales y también encontramos referencias a un personaje destacado de la primera mitad del siglo XIX, Teotonio de Ornelas, un curioso latifundista de ideas liberales que poniendo sus bienes al servicio de esta causa impidió la victoria de los absolutistas en Terceira.</p>
+        <div class="post-image">
+          <img src="/images/azores-479-3197aaa2bca4.jpg" alt="Y al final de la calle, un sencillo mercado cubierto que data del siglo XIX. Llegamos allí avanzada la mañana y estaba poco animado." loading="lazy" />
+          <p class="caption">Y al final de la calle, un sencillo mercado cubierto que data del siglo XIX. Llegamos allí avanzada la mañana y estaba poco animado.</p>
+        </div>
+        <p>"font-weight: bold;"></p>
+        <h2>Caminata Serrata-Lagoinha-Serrata</h2>
+        <p>El domingo elegimos hacer una andaina por el interior montañoso en el oeste de la isla, en la pedanía de Serreta, en concreto la ruta circular Serrata-Lagoinha-Serrata.</p>
+        <div class="post-image">
+          <img src="/images/azores-481-5240cb4ecfbd.jpg" alt="Nuestra furgoneta estacionada para empezar la marcha" loading="lazy" />
+          <p class="caption">Nuestra furgoneta estacionada para empezar la marcha</p>
+        </div>
+        <p>r al punto de partida, y un buen rato más.</p>
+        <div class="post-image">
+          <img src="/images/azores-483-f2bda8e559be.jpg" alt="Silencio, soledad y naturaleza durante las horas en el camino" loading="lazy" />
+          <p class="caption">Silencio, soledad y naturaleza durante las horas en el camino</p>
+        </div>
+        <p>grabado en Wikiloc por otros paseantes. Pero ya desde el principio este paisaje campestre con aires londinenses nos pareció de primera.</p>
+        <div class="post-image">
+          <img src="/images/azores-485-29a9f55ace01.jpg" alt="Imponentes bosques de criptomeria japónica" loading="lazy" />
+          <p class="caption">Imponentes bosques de criptomeria japónica</p>
+        </div>
+        <p>do momento el suelo encharcado o embarrado. Con seguridad había llovido en los últimos días y con la arboleda el sol no penetra. En la primera parte abundaban las extensiones de criptomeria, árboles rectilíneos de origen japonés, verdaderamente esbeltos y cuya madera es muy apreciada.</p>
+        <div class="post-image">
+          <img src="/images/azores-487-723785c4127f.jpg" alt="Los paisajes y los tipos de árboles fueron cambiando, pero siempre conjuntos muy bellos." loading="lazy" />
+          <p class="caption">Los paisajes y los tipos de árboles fueron cambiando, pero siempre conjuntos muy bellos.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-489-5dc23ad1b5e7.jpg" alt="De manera especial cuando en zonas umbrías el musgo lo tapizaba casi todo." loading="lazy" />
+          <p class="caption">De manera especial cuando en zonas umbrías el musgo lo tapizaba casi todo.</p>
+        </div>
+        <p>order: none; margin: 0px 0px 0px 40px; padding: 0px;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-491-c613c067725e.jpg" alt="Aproximadamente tras una hora de marcha las planicies con ligeras pendientes dieron paso a una muy larga cuesta, bastante embarrada, que tuvimos que supera" loading="lazy" />
+          <p class="caption">Aproximadamente tras una hora de marcha las planicies con ligeras pendientes dieron paso a una muy larga cuesta, bastante embarrada, que tuvimos que supera</p>
+        </div>
+        <p>r y que nos recordó a nuestras queridas "escaleras Kumano", de cuando hicimos el <a href="https://kumanokodo2010.blogspot.com/" target="_blank" rel="noopener">viaje a Japón</a> y el Kumano Kodo.</p>
+        <div class="post-image">
+          <img src="/images/azores-493-08f14e889312.jpg" alt="El ascenso nos hizo sudar y nos colocó en un nivel más elevado del monte, donde volvimos a llanear." loading="lazy" />
+          <p class="caption">El ascenso nos hizo sudar y nos colocó en un nivel más elevado del monte, donde volvimos a llanear.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-495-5092b98b9cd1.jpg" alt="En un lateral del camino vimos un desvío a Lagoinha, subiendo casi en vertical a otra parte más alta de esta montaña. No teníamos idea de si merecía la pena y una pequeña parte del grupo subió a explora" loading="lazy" />
+          <p class="caption">En un lateral del camino vimos un desvío a Lagoinha, subiendo casi en vertical a otra parte más alta de esta montaña. No teníamos idea de si merecía la pena y una pequeña parte del grupo subió a explora</p>
+        </div>
+        <p>r. La subida fue larga y cansada, con escalones de madera irregulares. Al cabo de un cuarto de hora, aproximadamente, llegaron a una especie de mirador donde lo único que se veía era la niebla. Así que vuelta para atrás y a seguir la ruta. Claro, los que se habían quedado no manifestaron interés en esta subida.</p>
+        <div class="post-image">
+          <img src="/images/azores-497-bf342c794cf7.jpg" alt="Los charcos aparecían de seguido y era muy difícil evitar zonas casi inundadas, pero, afortunadamente, el sol se dejó ver." loading="lazy" />
+          <p class="caption">Los charcos aparecían de seguido y era muy difícil evitar zonas casi inundadas, pero, afortunadamente, el sol se dejó ver.</p>
+        </div>
+        <p>" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-499-efaf8c18576a.jpg" alt="Amplias zonas estaban cubiertas de brezo" loading="lazy" />
+          <p class="caption">Amplias zonas estaban cubiertas de brezo</p>
+        </div>
+        <p>, y no había más distracción que el ruido de los pájaros, el viento y el agua que resbalaba de las hojas empapadas de los árboles.</p>
+        <div class="post-image">
+          <img src="/images/azores-501-73978b58d34c.jpg" alt="El paisaje cambia y aparecen extensos prados" loading="lazy" />
+          <p class="caption">El paisaje cambia y aparecen extensos prados</p>
+        </div>
+        <p>de pasto, conviviendo con los bosques que nos acompañaban desde el principio. Y de repente llegó la sorpresa en la pequeña senda por la que discurríamos, emparedados de una lado por alambre de espino y un pastor eléctrico, y del otro lado una pendiente sobre lo que parecía una caldera.</p>
+        <div class="post-image">
+          <img src="/images/azores-503-cad67993b785.jpg" alt="Debido a las lluvias, el terreno había cedido y un gran socavón impedía el paso." loading="lazy" />
+          <p class="caption">Debido a las lluvias, el terreno había cedido y un gran socavón impedía el paso.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-505-d9488223edbb.jpg" alt="Tras analizar las opciones, decidimos sortear el alambre de espino y el pastor eléctrico casi arrastrándonos por el suelo, y seguir por el prado unos cientos de metros." loading="lazy" />
+          <p class="caption">Tras analizar las opciones, decidimos sortear el alambre de espino y el pastor eléctrico casi arrastrándonos por el suelo, y seguir por el prado unos cientos de metros.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-507-5a0a801bef0b.jpg" alt="Por suerte estaba vacío, sin ganado, no tuvimos que confraternizar con vacas." loading="lazy" />
+          <p class="caption">Por suerte estaba vacío, sin ganado, no tuvimos que confraternizar con vacas.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-509-d02ca41d8f43.jpg" alt="Lo dicho, pasar bajo el alambre de espino fue una tarea complicada." loading="lazy" />
+          <p class="caption">Lo dicho, pasar bajo el alambre de espino fue una tarea complicada.</p>
+        </div>
+        <div class="post-image">
+          <img src="/images/azores-511-419500463004.jpg" alt="Una vez de nuevo en el camino, unas tablas providenciales nos salvaron del barro que invadía la senda. A continuación, un muy pronunciado descenso para compensar la subida que habíamos hecho un rat" loading="lazy" />
+          <p class="caption">Una vez de nuevo en el camino, unas tablas providenciales nos salvaron del barro que invadía la senda. A continuación, un muy pronunciado descenso para compensar la subida que habíamos hecho un rat</p>
+        </div>
+        <p>o antes. Se trataba de una ruta circular, por lo que debíamos regresar al mismo nivel del comienzo.</p>
+        <div class="post-image">
+          <img src="/images/azores-513-801fea986ac5.jpg" alt="Tuvimos tiempo para descansar, pues sin ser una ruta muy difícil nos había desgastado. Superamos un desnivel de 428 metros y oficialmente no llegamos a los 7 kilómetros, que a todos" loading="lazy" />
+          <p class="caption">Tuvimos tiempo para descansar, pues sin ser una ruta muy difícil nos había desgastado. Superamos un desnivel de 428 metros y oficialmente no llegamos a los 7 kilómetros, que a todos</p>
+        </div>
+        <p>nos parecieron algunos más, en los que empleamos 4 horas y 20 minutos, descansos y paradas incluidas, que fueron muchas, una media real de principiantes totales (2,7 km/h). El punto más alto de la ruta, 734 metros,</p>
+        <h2>Gruta do Natal</h2>
+        <p>La visita a la Gruta do Natal (Gruta de Navidad) es una visita recomendable. Se trata de un tubo volcánico formado en una erupción en la que la lava ha dejado huecos al solidificarse, aunque tiene en muchas zonas más aspecto de cueva que de tubo por sus dimensiones y la presencia de estalactitas y estalagmitas. Es interesante, pero algunos de los presentes habíamos estado en otras más impresionantes.</p>
+        <div class="post-image">
+          <img src="/images/azores-515-d8f35af2b4be.jpg" alt="Protegidos con cascos ya que los golpes eran inevitables" loading="lazy" />
+          <p class="caption">Protegidos con cascos ya que los golpes eran inevitables</p>
+        </div>
+        <p>itables . Como siempre en una cueva, era preciso andar con cuidado por las irregularidades del terreno y el agua que siempre gotea y encharca el suelo.</p>
+        <div class="post-image">
+          <img src="/images/azores-517-fc4eb13a6121.jpg" alt="Un plano a la entrada permitía comprobar el trazado de esta gruta y las zonas por las que íbamos a caminar." loading="lazy" />
+          <p class="caption">Un plano a la entrada permitía comprobar el trazado de esta gruta y las zonas por las que íbamos a caminar.</p>
+        </div>
+        <p>kquote style="border: none; margin: 0px 0px 0px 40px; padding: 0px;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-519-1967f675c434.jpg" alt="En la mayor parte del recorrido se camina con cierta comodidad, pero hay dos puntos negros, uno especialmente, que hace que no sea ac" loading="lazy" />
+          <p class="caption">En la mayor parte del recorrido se camina con cierta comodidad, pero hay dos puntos negros, uno especialmente, que hace que no sea ac</p>
+        </div>
+        <p>onsejable para todas las personas. En esos lugares había casi que arrastrarse para pasar por una pequeña oquedad y en penumbra. Fue complicadillo, pero lo superamos.</p>
+        <div class="post-image">
+          <img src="/images/azores-521-2a0d6e6a38c4.jpg" alt="El nombre actual de la gruta data de 1969, cuando se decidió celebrar allí la misa de Navidad, evento religioso que se ha repetido. Anteriormente se denominaba Galería Negra, por la" loading="lazy" />
+          <p class="caption">El nombre actual de la gruta data de 1969, cuando se decidió celebrar allí la misa de Navidad, evento religioso que se ha repetido. Anteriormente se denominaba Galería Negra, por la</p>
+        </div>
+        <p>oscuridad que imperaba cuando se descubrió, y también Cova do Cabalo, porque apareció cerca un hueso de caballo. Dentro incluso se ha celebrado un bautizo y hasta una boda.<a</p>
+        <div class="post-image">
+          <img src="/images/azores-523-80bf424c4f5b.jpg" alt="Pasamos un rato agradable viendo esta maravilla de la naturaleza, incluso recordamos que el año anterior habíamos visitado en Puglia (Italia) una cueva igualmente interesante, la Grutta di Castellana. Esta costó 9" loading="lazy" />
+          <p class="caption">Pasamos un rato agradable viendo esta maravilla de la naturaleza, incluso recordamos que el año anterior habíamos visitado en Puglia (Italia) una cueva igualmente interesante, la Grutta di Castellana. Esta costó 9</p>
+        </div>
+        <p>euros, aquella 20 más un plus de 6 que nos colaron. Al margen de la gruta teníamos también intención de conocer el Algar do Carvao, una chimenea volcánica de 80 metros de profundidad con un lago cristalino en el fondo, para lo cual hay que descender 338 escalones, pero estaba cerrada.</p>
+        <div class="post-image">
+          <img src="/images/azores-525-6ef648f5cbd3.jpg" alt="Así que nos conformamos visitando solo la gruta y dejamos con esta fotografía constancia del paisaje de la zona, que no está muy lejos de la ruta de la caminata de Serreta, en el parque natural de la Sier" loading="lazy" />
+          <p class="caption">Así que nos conformamos visitando solo la gruta y dejamos con esta fotografía constancia del paisaje de la zona, que no está muy lejos de la ruta de la caminata de Serreta, en el parque natural de la Sier</p>
+        </div>
+        <p>ra de Santa Bárbara y bosque de Misterios Negros, cerca de Picos Negros.</p>
+        <h2>Mirador Serra do Cume</h2>
+        <p>Desde la gruta subterránea nos desplazamos al mirador de la Sierra de Cume, y lo que en principio era una forma de completar la tarde se convirtió en una visita inolvidable. Para no explicar el motivo vale con mostrar una fotografía.</p>
+        <div class="post-image">
+          <img src="/images/azores-527-9b4fa3af4e9a.jpg" alt="Cuadrículas en la enorme caldera desde el mirador de Cume" loading="lazy" />
+          <p class="caption">Cuadrículas en la enorme caldera desde el mirador de Cume</p>
+        </div>
+        <p>nta de retales, por lo demás una descripción acertada, está considerado el más espectacular de la isla. De manera especial, desde el puente de madera que cuelga al visitante sobre el vacío.</p>
+        <div class="post-image">
+          <img src="/images/azores-529-f16a34d203b4.jpg" alt="Para hacerse una idea de las dimensiones de la caldera, señalar que alcanza en su punto más extenso 15 kilómetros de diámetro, eso en una isla de 29 por 18 kilómetros. En otras palabras, que e" loading="lazy" />
+          <p class="caption">Para hacerse una idea de las dimensiones de la caldera, señalar que alcanza en su punto más extenso 15 kilómetros de diámetro, eso en una isla de 29 por 18 kilómetros. En otras palabras, que e</p>
+        </div>
+        <p>n esa hondonada está una parte sustancial del territorio de Terceira.</p>
+        <div class="post-image">
+          <img src="/images/azores-531-39195aa49236.jpg" alt="Pasamos un buen rato extasiados con las vistas, mirando y remirando porque de un vistazo es imposible contemplarla." loading="lazy" />
+          <p class="caption">Pasamos un buen rato extasiados con las vistas, mirando y remirando porque de un vistazo es imposible contemplarla.</p>
+        </div>
+        <p>style="margin-left: auto; margin-right: auto;"><a</p>
+        <div class="post-image">
+          <img src="/images/azores-533-715f13924456.jpg" alt="Colgados del mirador de la sierra de Cume" loading="lazy" />
+          <p class="caption">Colgados del mirador de la sierra de Cume</p>
+        </div>
+        <p>odamente apoyado disfrutas del espectáculo.</p>
+        <div class="post-image">
+          <img src="/images/azores-535-f84bd8975dae.jpg" alt="Justo debajo del mirador, un rebaño de vacas que semejan puntos minúsculos" loading="lazy" />
+          <p class="caption">Justo debajo del mirador, un rebaño de vacas que semejan puntos minúsculos</p>
+        </div>
+        <p>de fincas verdes y alguna solo tostada, separadas por muros de piedra volcánica, la exuberante naturaleza de la isla y al fondo Praia da Victoria y el mar Atlántico. Un momento para recordar.</p>
+        <h2>Restaurantes</h2>
+        <p>Comimos bien en las Azores y desde luego también en Terceira, donde disfrutamos de precios similares a los de San Miguel, como ya hemos comentado bastante más económicos que en Flores. Del único que no tenemos foto es del restaurante Golphinho, en el paseo marítimo de Porto Martins. Nos instalamos en la terraza, y tras un quiebro con el entrante que había/no había, tomamos carnes y pescados. Decente, y a una distancia de nuestra casa que nos permitió ir caminando.</p>
+        <div class="post-image">
+          <img src="/images/azores-537-fcfda6d245db.jpg" alt="Taberna Boca Santa en el casco antiguo de Angra, recomendable" loading="lazy" />
+          <p class="caption">Taberna Boca Santa en el casco antiguo de Angra, recomendable</p>
+        </div>
+        <p>ttps://www.facebook.com/profile.php?id=61578638580640&amp;locale=it_IT#" target="_blank">esta taberna en el casco antiguo de Angra, bien puesta y decorada, en el que su propietario nos explicó que lo llevaba con su mujer desde hacía pocos unos meses. A destacar una vajilla muy especial y platos ricos, pescado especialmente.</p>
+        <div class="post-image">
+          <img src="/images/azores-539-55e20f944118.jpg" alt="Senhor Alguidar, un bufé decente y desde luego barato" loading="lazy" />
+          <p class="caption">Senhor Alguidar, un bufé decente y desde luego barato</p>
+        </div>
+        <p>//www.facebook.com/p/Senhor-Alguidar-Restaurante-61559553312488/" target="_blank">pequeño restaurante bufé de Praia Victoria fue elegido por descarte ya que no encontramos otro a mano esa jornada. La verdad es que por los 12 euros que costaba, todo incluido salvo las bebidas (sumadas salimos a 16), pocas pegas pueden ponerse.</p>
+        <div class="post-image">
+          <img src="/images/azores-541-76e164fbba81.jpg" alt="Quinta das Azores, donde casi todos tomamos espetadas de carne tamaño XXL" loading="lazy" />
+          <p class="caption">Quinta das Azores, donde casi todos tomamos espetadas de carne tamaño XXL</p>
+        </div>
+        <p>href="https://www.quintadosacores.com/restaurante-sede/" target="_blank">Quinta das Azores, un restaurante en un centro comercial de la periferia de Angra. Era una hora tardía y otras opciones que exploramos sobre la marcha habían fracasado. Es un local enorme, bien puesto, al parecer, la sede de una franquicia. Estuvimos cómodos y correctamente atendidos. En la comida primaba la carne, pero las espetadas eran mejorables.</p>
+        <div class="post-image">
+          <img src="/images/azores-543-198de9eecadd.jpg" alt="Bar Birou, en el centro de Angra, comida local con toques rumanos" loading="lazy" />
+          <p class="caption">Bar Birou, en el centro de Angra, comida local con toques rumanos</p>
+        </div>
+        <p>ar y un poco fuera de hora a veces nos dio quebraderos de cabeza. Uno de los días, tras varios intentos, acabamos en el <a href="https://www.facebook.com/profile.php?id=100058285555646#" target="_blank" rel="noopener">Bar Birou</a>, un local en el que sus dueños rumanos han aportado recetas de su tierra. Comimos francamente bien (27 euros persona) y nuestro mesero nos dio bastante conversación al darse cuenta de que éramos españoles. Tiene un grave problema de visión del que le han tratado en la clínica Barraquer de Barcelona, y estaba satisfecho del resultado. Y como la semana siguiente se iba de vacaciones a Marruecos, se mostraba alegre.</p>
+        <h2>Nuestro Alojamiento y Alrededores</h2>
+        <div class="post-image">
+          <img src="/images/azores-545-11520a6b993a.jpg" alt="Fachada de nuestra vivienda, bien pero no se correspondía con lo que anunciaban" loading="lazy" />
+          <p class="caption">Fachada de nuestra vivienda, bien pero no se correspondía con lo que anunciaban</p>
+        </div>
+        <p>bíamos alquilado, <a href="https://www.booking.com/hotel/pt/vila-canada-das-vinhas.es.html?aid=2311236&amp;label=es-gb-booking-desktop-Tbedh6Fx7PYuf%2AUeThNAJgS652829002033%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp1006906%3Ali%3Adec%3Adm&amp;sid=abc7cd6db76e68be41e96b1d2205b1e9" target="_blank" rel="noopener">Vila Canada das Vinhas</a>, se encontraba en Porto Martins, un núcleo de Praia daVictoria al sur de esta ciudad. Es una zona litoral muy volcada en el mar, pero nosotros estábamos en el interior. La vivienda era similar a las anteriores, ya que buscamos siempre disponer de cinco habitaciones, al menos cuatro de ellas dobles y como mínimo tres baños completos. Las dos primeras casas cumplían, pero esta no. Había tres dormitorios dobles y dos sencillos, para nueve personas, con lo una persona quedaba colgada. Además, uno de los tres baños era un aseo, por lo que tuvimos que apañarnos con dos duchas para nueve. Esto y alguna otra deficiencia menor. El parche de los alquilantes fue traer una cama supletoria y apañamos, pero no quedamos contentos. El precio por los 5 días fue de 800 euros.</p>
+        <div class="post-image">
+          <img src="/images/azores-547-d68b88b36601.jpg" alt="En la cocina preparando el desayuno, momento de máxima actividad" loading="lazy" />
+          <p class="caption">En la cocina preparando el desayuno, momento de máxima actividad</p>
+        </div>
+        <p>terior se sumaba una luz tan deficiente en la cocina que de noche no se podía hacer nada allí. Y la escasez de menaje era clamorosa.</p>
+        <div class="post-image">
+          <img src="/images/azores-549-d98dfc0d6da8.jpg" alt="Comedor, con nuestro desayuno casero listo" loading="lazy" />
+          <p class="caption">Comedor, con nuestro desayuno casero listo</p>
+        </div>
+        <p>pero para cinco días nos daba igual.</p>
+        <div class="post-image">
+          <img src="/images/azores-551-9c74441e6b29.jpg" alt="Clase on line de estiramientos después de la Serreta" loading="lazy" />
+          <p class="caption">Clase on line de estiramientos después de la Serreta</p>
+        </div>
+        <p>ores y a disfrutar, así que preferimos centrarnos en lo que salió bien, que fue casi todo. Pateamos Terceira, hicimos ejercicio y hasta nos vimos en tres noches la serie Animal, en la que Luis Zahera borda su personaje. Y lejos de Galicia, incluso nos hizo más gracia. <a</p>
+        <div class="post-image">
+          <img src="/images/azores-553-0442dd147377.jpg" alt="Litoral de Porto Martins, un lugar agradable" loading="lazy" />
+          <p class="caption">Litoral de Porto Martins, un lugar agradable</p>
+        </div>
+        <p>s centramos en otras partes de la isla que consideramos más interesantes.</p>
+        <div class="post-image">
+          <img src="/images/azores-555-014cb6beaa83.jpg" alt="Paseo marítimo de Porto Martins al atardecer" loading="lazy" />
+          <p class="caption">Paseo marítimo de Porto Martins al atardecer</p>
+        </div>
+        <p>dos de octubre lo vimos muy vacío.</p>
+        <p>Y como despedida de este repaso a nuestra estancia en las islas, una imagen sólida y bien plantada de los tres de las Azores, pues en nuestro grupo de nueve viajeros solo tres eran varones.</p>
+        <div class="post-image">
+          <img src="/images/azores-557-20a4bdf1be98.jpg" alt="&lt;" loading="lazy" />
+          <p class="caption"><</p>
+        </div>
+        <p>/span>Finalmente, una vista de los islotes de las Cabras, situados en el sur de la isla pegados a la costa. Era una única isla circular, pero las erupciones submarinas y la erosión la dividieron. No hay nada en ellas salvo grutas en su acantilados, al parecer refugio de piratas en su día, e importantes colonias de aves.</p>
+        <div class="post-image">
+          <img src="/images/azores-559-7298d29c03bc.jpg" alt="&lt;span style=&quot;font-weight: bol" loading="lazy" />
+          <p class="caption"><span style="font-weight: bol</p>
+        </div>
+        <p>d;">Por nuestra parte, dejamos Azores contentos del viaje, satisfechos de haber conocido cuatro de sus nueve islas y sin descartar volver cuando sea para ver algunas de las restantes. No será inmediato, pero de momento ya estamos preparando la próxima escapada, que no será muy tarde. Sin dar más pistas, seguro que encontramos algunas imponentes pirámides en el país elegido. Al regreso lo contaremos.</p>
+        <p>&#161;Hasta entonces!</p>
+      </section>
+
+    </article>
+  </main>
+</BaseLayout>
