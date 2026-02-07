@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    slug: '/san-miguel',
+    title: 'São Miguel: verdor, lagos e historia',
+    island: 'São Miguel',
+    description: 'Ponta Delgada, Ribeira Grande, Vila Franca do Campo, senderismo por Sete Cidades y As Furnas, restaurantes y alojamiento.',
+    image: '/images/azores-004-4b6e2d49c1ec.jpg'
+  },
+  {
+    slug: '/flores',
+    title: 'Flores: naturaleza para perder el sentido',
+    island: 'Flores',
+    description: 'Cascadas espectaculares en Fajazinha, el Museo de la Ballena, la ruta al Faro de Albarnaz y la Aldeia da Cuada.',
+    image: '/images/azores-160-11b87d9a1ea7.jpg'
+  },
+  {
+    slug: '/corvo',
+    title: 'Corvo: un volcán transformado en isla mini',
+    island: 'Corvo',
+    description: 'La isla más pequeña de las Azores, su gigantesca caldera volcánica, los acantilados de Flores desde el mar y Vila de Corvo.',
+    image: '/images/azores-302-7c8157bdc5fb.jpg'
+  },
+  {
+    slug: '/terceira',
+    title: 'Terceira: Patrimonio de la Humanidad y mucha belleza',
+    island: 'Terceira',
+    description: 'Angra do Heroísmo, Praia da Victoria, la caminata de Serreta, la Gruta do Natal y el mirador de Serra do Cume.',
+    image: '/images/azores-374-bdb8435b897d.jpg'
+  }
+];
+---
+<BaseLayout title="5 días de otoño por las Azores — Crónica de viaje">
+  <div class="home-hero">
+    <h1>5 días de otoño<br/>por las Azores</h1>
+    <p>Nueve amigos, quince días, cuatro islas. Crónica de un viaje al comienzo del otoño por São Miguel, Flores, Corvo y Terceira.</p>
+  </div>
+  
+  <div class="home-intro">
+    <main>
+      <p>Nueve amigos elegimos las Azores para un viaje de quince días al comienzo del otoño. El plan preveía visitar cuatro de las nueve islas, las que consideramos más accesibles e interesantes. Llegada al aeropuerto de Ponta Delgada, la capital de la isla de São Miguel; vuelo posterior a Flores, con escapada marítima a la diminuta isla de Corvo y, finalmente, isla Terceira. En cada una de las tres, cinco días alojados en una casa amplia con capacidad para todos. Así se planeó y se ejecutó. Y todo salió sin problemas... de relevancia.</p>
+    </main>
+  </div>
+  
+  <div class="post-cards">
+    {posts.map(post => (
+      <a class="post-card" href={post.slug}>
+        <img src={post.image} alt={post.title} loading="lazy" />
+        <div class="card-body">
+          <span class="island-tag">{post.island}</span>
+          <h2>{post.title}</h2>
+          <p>{post.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .home-intro {
+    background: var(--color-bg-warm);
+    padding: 0 0 1rem;
+  }
+  .home-intro main {
+    padding-top: 2rem;
+  }
+  .home-intro p {
+    font-size: 1.05rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+</style>
